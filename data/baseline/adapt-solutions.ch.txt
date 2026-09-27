@@ -1,0 +1,12 @@
+autodiscover.adapt-solutions.ch
+backoffice.adapt-solutions.ch
+cloud.adapt-solutions.ch
+enterpriseregistration.adapt-solutions.ch
+extern.adapt-solutions.ch
+mail.adapt-solutions.ch
+onboarding-test.adapt-solutions.ch
+onboarding.adapt-solutions.ch
+pyb-wiki.adapt-solutions.ch
+sip.adapt-solutions.ch
+www.adapt-solutions.ch
+www.pyb-wiki.adapt-solutions.ch
