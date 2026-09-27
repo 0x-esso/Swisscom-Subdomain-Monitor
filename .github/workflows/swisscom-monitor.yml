@@ -9,10 +9,6 @@ on:
         description: 'Optional: Custom scope URL (leave empty for default Swisscom)'
         required: false
         default: ''
-      notify_telegram:
-        description: 'Send Telegram notification on new findings? (true/false)'
-        required: false
-        default: 'true'
 
 permissions:
   contents: write
@@ -338,39 +334,7 @@ jobs:
           cat results/CONSOLIDATED_REPORT.md
 
       # --------------------------------------------------
-      # 7. Telegram Notification (optional)
-      # --------------------------------------------------
-      - name: Send Telegram Notification
-        if: >
-          secrets.TELEGRAM_BOT_TOKEN != '' &&
-          secrets.TELEGRAM_CHAT_ID != '' &&
-          github.event.inputs.notify_telegram != 'false'
-        run: |
-          TOTAL_NEW=$(cat results/stats_total_new.txt 2>/dev/null || echo 0)
-
-          if [ "$TOTAL_NEW" -gt 0 ]; then
-            MESSAGE="🛡️ *Swisscom Monitor Alert*%0A"
-            MESSAGE="${MESSAGE}📅 $(date -u '+%Y-%m-%d %H:%M UTC')%0A"
-            MESSAGE="${MESSAGE}🆕 *$TOTAL_NEW new subdomains found!*%0A%0A"
-
-            for domain in $(cat data/scope.txt); do
-              if [ -s "results/new_${domain}.txt" ]; then
-                COUNT=$(wc -l < "results/new_${domain}.txt")
-                MESSAGE="${MESSAGE}🔹 \`$domain\` → +$COUNT new%0A"
-              fi
-            done
-
-            curl -sS "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
-              -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}" \
-              -d "text=${MESSAGE}" \
-              -d "parse_mode=Markdown" > /dev/null
-            echo "[+] Telegram notification sent."
-          else
-            echo "[-] No new findings — skipping notification."
-          fi
-
-      # --------------------------------------------------
-      # 8. Upload Results as GitHub Artifact
+      # 7. Upload Results as GitHub Artifact
       # --------------------------------------------------
       - name: Upload results
         uses: actions/upload-artifact@v4
@@ -382,7 +346,7 @@ jobs:
           retention-days: 30
 
       # --------------------------------------------------
-      # 9. Commit Updated Baselines
+      # 8. Commit Updated Baselines
       # --------------------------------------------------
       - name: Commit updated baselines
         run: |
