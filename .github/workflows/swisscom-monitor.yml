@@ -1,0 +1,181 @@
+name: Swisscom Subdomain Monitor
+
+on:
+  schedule:
+    # Every day at 00:00 UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+    inputs:
+      custom_scope_url:
+        description: 'Optional: Custom URL for scope (leave empty to use default Swisscom)'
+        required: false
+        default: 'https://raw.githubusercontent.com/swisscom/bugbounty/refs/heads/main/scope/inscope.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      # --------------------------------------------------
+      # 1. Checkout repository
+      # --------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # --------------------------------------------------
+      # 2. Install Go
+      # --------------------------------------------------
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.23"
+
+      # --------------------------------------------------
+      # 3. Install Tools (Subfinder & Httpx)
+      # --------------------------------------------------
+      - name: Install ProjectDiscovery Tools
+        run: |
+          go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+          go install github.com/projectdiscovery/httpx/cmd/httpx@latest
+          echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
+
+      # --------------------------------------------------
+      # 4. Prepare directories and fetch scope
+      # --------------------------------------------------
+      - name: Prepare directories and fetch scope
+        run: |
+          mkdir -p data/baseline
+          mkdir -p results
+
+          # Determine scope URL
+          SCOPE_URL="${{ github.event.inputs.custom_scope_url || 'https://raw.githubusercontent.com/swisscom/bugbounty/refs/heads/main/scope/inscope.txt' }}"
+          
+          echo "[*] Fetching scope from: $SCOPE_URL"
+          curl -sL "$SCOPE_URL" | \
+            grep -v '^\s*#' | \
+            grep -v '^\s*$' | \
+            sed 's/^\*\.//' | \
+            sed 's/\.$//' | \
+            tr '[:upper:]' '[:lower:]' | \
+            sort -u > data/scope.txt
+
+          echo "[+] Scope loaded. Total unique root domains: $(wc -l < data/scope.txt)"
+          cat data/scope.txt
+
+      # --------------------------------------------------
+      # 5. Enumerate and Detect New Subdomains (Per Domain)
+      # --------------------------------------------------
+      - name: Enumerate and Detect New Subdomains
+        run: |
+          echo "======================================"
+          echo "        STARTING MONITORING"
+          echo "======================================"
+
+          while read -r domain; do
+            [ -z "$domain" ] && continue
+            
+            echo ""
+            echo "[*] Processing: $domain"
+            
+            # 1. Enumerate
+            subfinder -d "$domain" -silent -all -o "results/current_${domain}.txt" || true
+            
+            # 2. Clean and normalize
+            sed 's/\r$//' "results/current_${domain}.txt" | \
+              tr '[:upper:]' '[:lower:]' | \
+              sed 's/\.$//' | \
+              sort -u > "results/current_clean_${domain}.txt"
+            
+            # 3. Ensure baseline exists
+            touch "data/baseline/${domain}.txt"
+            sort -u "data/baseline/${domain}.txt" -o "data/baseline/${domain}.txt"
+            
+            # 4. Find NEW subdomains only
+            comm -13 "data/baseline/${domain}.txt" "results/current_clean_${domain}.txt" > "results/new_${domain}.txt"
+            
+            # 5. If new subdomains found, probe with httpx
+            if [ -s "results/new_${domain}.txt" ]; then
+              echo "    [+] New subdomains found for $domain! Probing with httpx..."
+              httpx -l "results/new_${domain}.txt" -silent -status-code -title -tech-detect -content-length \
+                -o "results/new_${domain}_httpx.txt" || true
+              
+              echo "    [HTTPX Results for $domain]:"
+              cat "results/new_${domain}_httpx.txt"
+            else
+              echo "    [-] No new subdomains for $domain."
+            fi
+            
+            # 6. Update baseline for this domain
+            cat "results/current_clean_${domain}.txt" >> "data/baseline/${domain}.txt"
+            sort -u "data/baseline/${domain}.txt" -o "data/baseline/${domain}.txt"
+            
+          done < data/scope.txt
+
+      # --------------------------------------------------
+      # 6. Generate Consolidated Report
+      # --------------------------------------------------
+      - name: Generate Consolidated Report
+        run: |
+          {
+            echo "# 🛡️ Swisscom Subdomain Monitor Report"
+            echo "**Date:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+            echo "**Scope Source:** ${{ github.event.inputs.custom_scope_url || 'Default Swisscom Scope' }}"
+            echo ""
+            echo "## 🆕 New Subdomains Discovered"
+            echo ""
+            
+            FOUND_ANY=false
+            for domain in $(cat data/scope.txt); do
+              if [ -s "results/new_${domain}_httpx.txt" ]; then
+                FOUND_ANY=true
+                echo "### 🔹 $domain"
+                echo '```text'
+                cat "results/new_${domain}_httpx.txt"
+                echo '```'
+                echo ""
+              fi
+            done
+            
+            if [ "$FOUND_ANY" = false ]; then
+              echo "✅ No new subdomains found in this run."
+            fi
+          } > results/CONSOLIDATED_REPORT.md
+
+          echo ""
+          echo "======================================"
+          echo "        REPORT SUMMARY"
+          echo "======================================"
+          cat results/CONSOLIDATED_REPORT.md
+
+      # --------------------------------------------------
+      # 7. Upload results as GitHub Artifact
+      # --------------------------------------------------
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: swisscom-subdomain-results-${{ github.run_number }}
+          path: results/
+          retention-days: 14
+
+      # --------------------------------------------------
+      # 8. Commit updated baselines
+      # --------------------------------------------------
+      - name: Commit updated baselines
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/baseline/
+
+          if git diff --cached --quiet; then
+            echo "[-] No baseline changes to commit."
+          else
+            git commit -m "chore: update subdomain baselines for Swisscom scope"
+            # Note: If your repo has branch protection, you might need to use a PAT instead of GITHUB_TOKEN
+            git push
+          fi
