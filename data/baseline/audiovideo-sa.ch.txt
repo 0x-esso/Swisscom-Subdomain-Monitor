@@ -1,0 +1,5 @@
+autodiscover.audiovideo-sa.ch
+mail.audiovideo-sa.ch
+mailsg.audiovideo-sa.ch
+www.audiovideo-sa.ch
+www.mailsg.audiovideo-sa.ch
