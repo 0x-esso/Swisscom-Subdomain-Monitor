@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       custom_scope_url:
-        description: 'Optional: Custom URL for scope (leave empty to use default Swisscom)'
+        description: 'Optional: Custom URL for scope'
         required: false
         default: 'https://raw.githubusercontent.com/swisscom/bugbounty/refs/heads/main/scope/inscope.txt'
 
@@ -52,11 +52,12 @@ jobs:
           mkdir -p data/baseline
           mkdir -p results
 
-          # Determine scope URL
           SCOPE_URL="${{ github.event.inputs.custom_scope_url || 'https://raw.githubusercontent.com/swisscom/bugbounty/refs/heads/main/scope/inscope.txt' }}"
           
           echo "[*] Fetching scope from: $SCOPE_URL"
+          # FIX: Added 'tr -d '\r'' to remove any Windows line endings safely
           curl -sL "$SCOPE_URL" | \
+            tr -d '\r' | \
             grep -v '^\s*#' | \
             grep -v '^\s*$' | \
             sed 's/^\*\.//' | \
@@ -64,8 +65,10 @@ jobs:
             tr '[:upper:]' '[:lower:]' | \
             sort -u > data/scope.txt
 
-          echo "[+] Scope loaded. Total unique root domains: $(wc -l < data/scope.txt)"
-          cat data/scope.txt
+          DOMAIN_COUNT=$(wc -l < data/scope.txt)
+          echo "[+] Scope loaded successfully. Total unique root domains to process: $DOMAIN_COUNT"
+          echo "First 5 domains to be processed:"
+          head -n 5 data/scope.txt
 
       # --------------------------------------------------
       # 5. Enumerate and Detect New Subdomains (Per Domain)
@@ -76,7 +79,8 @@ jobs:
           echo "        STARTING MONITORING"
           echo "======================================"
 
-          while read -r domain; do
+          # FIX: Robust while loop that handles files with or without trailing newlines
+          while IFS= read -r domain || [ -n "$domain" ]; do
             [ -z "$domain" ] && continue
             
             echo ""
@@ -85,11 +89,15 @@ jobs:
             # 1. Enumerate
             subfinder -d "$domain" -silent -all -o "results/current_${domain}.txt" || true
             
-            # 2. Clean and normalize
-            sed 's/\r$//' "results/current_${domain}.txt" | \
-              tr '[:upper:]' '[:lower:]' | \
-              sed 's/\.$//' | \
-              sort -u > "results/current_clean_${domain}.txt"
+            # 2. Clean and normalize (with safety check)
+            if [ -f "results/current_${domain}.txt" ]; then
+              sed 's/\r$//' "results/current_${domain}.txt" | \
+                tr '[:upper:]' '[:lower:]' | \
+                sed 's/\.$//' | \
+                sort -u > "results/current_clean_${domain}.txt"
+            else
+              touch "results/current_clean_${domain}.txt"
+            fi
             
             # 3. Ensure baseline exists
             touch "data/baseline/${domain}.txt"
@@ -105,7 +113,7 @@ jobs:
                 -o "results/new_${domain}_httpx.txt" || true
               
               echo "    [HTTPX Results for $domain]:"
-              cat "results/new_${domain}_httpx.txt"
+              cat "results/new_${domain}_httpx.txt" || true
             else
               echo "    [-] No new subdomains for $domain."
             fi
@@ -130,7 +138,8 @@ jobs:
             echo ""
             
             FOUND_ANY=false
-            for domain in $(cat data/scope.txt); do
+            while IFS= read -r domain || [ -n "$domain" ]; do
+              [ -z "$domain" ] && continue
               if [ -s "results/new_${domain}_httpx.txt" ]; then
                 FOUND_ANY=true
                 echo "### 🔹 $domain"
@@ -139,7 +148,7 @@ jobs:
                 echo '```'
                 echo ""
               fi
-            done
+            done < data/scope.txt
             
             if [ "$FOUND_ANY" = false ]; then
               echo "✅ No new subdomains found in this run."
@@ -176,6 +185,5 @@ jobs:
             echo "[-] No baseline changes to commit."
           else
             git commit -m "chore: update subdomain baselines for Swisscom scope"
-            # Note: If your repo has branch protection, you might need to use a PAT instead of GITHUB_TOKEN
             git push
           fi
