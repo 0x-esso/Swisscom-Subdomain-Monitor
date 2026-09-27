@@ -2,21 +2,29 @@ name: Swisscom Subdomain Monitor
 
 on:
   schedule:
-    # Every day at 00:00 UTC
     - cron: "0 0 * * *"
   workflow_dispatch:
     inputs:
       custom_scope_url:
-        description: 'Optional: Custom URL for scope'
+        description: 'Optional: Custom scope URL (leave empty for default Swisscom)'
         required: false
-        default: 'https://raw.githubusercontent.com/swisscom/bugbounty/refs/heads/main/scope/inscope.txt'
+        default: ''
+      notify_telegram:
+        description: 'Send Telegram notification on new findings? (true/false)'
+        required: false
+        default: 'true'
 
 permissions:
   contents: write
 
+env:
+  DEFAULT_SCOPE_URL: 'https://raw.githubusercontent.com/swisscom/bugbounty/refs/heads/main/scope/inscope.txt'
+  GO_VERSION: '1.23'
+
 jobs:
   monitor:
     runs-on: ubuntu-latest
+    timeout-minutes: 180  # FIX: overall job timeout - prevents infinite hang
 
     steps:
       # --------------------------------------------------
@@ -33,45 +41,62 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: "1.23"
+          go-version: ${{ env.GO_VERSION }}
+          cache: false
 
       # --------------------------------------------------
-      # 3. Install Tools (Subfinder & Httpx)
+      # 3. Install Tools
       # --------------------------------------------------
       - name: Install ProjectDiscovery Tools
         run: |
+          echo "[*] Installing subfinder, httpx, dnsx..."
           go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install github.com/projectdiscovery/httpx/cmd/httpx@latest
+          go install github.com/projectdiscovery/dnsx/cmd/dnsx@latest
           echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
+          echo "[+] Tools installed successfully"
+          subfinder -version
+          httpx -version
+          dnsx -version
 
       # --------------------------------------------------
       # 4. Prepare directories and fetch scope
       # --------------------------------------------------
       - name: Prepare directories and fetch scope
         run: |
-          mkdir -p data/baseline
-          mkdir -p results
+          mkdir -p data/baseline results logs
 
-          SCOPE_URL="${{ github.event.inputs.custom_scope_url || 'https://raw.githubusercontent.com/swisscom/bugbounty/refs/heads/main/scope/inscope.txt' }}"
-          
+          # FIX: proper ENV var fallback instead of inline expression
+          SCOPE_URL="${{ github.event.inputs.custom_scope_url }}"
+          SCOPE_URL="${SCOPE_URL:-$DEFAULT_SCOPE_URL}"
+
           echo "[*] Fetching scope from: $SCOPE_URL"
-          # FIX: Added 'tr -d '\r'' to remove any Windows line endings safely
-          curl -sL "$SCOPE_URL" | \
-            tr -d '\r' | \
+
+          # FIX: -f flag on curl to fail on HTTP errors, not silently produce empty file
+          if ! curl -sSfL "$SCOPE_URL" | \
             grep -v '^\s*#' | \
             grep -v '^\s*$' | \
             sed 's/^\*\.//' | \
             sed 's/\.$//' | \
             tr '[:upper:]' '[:lower:]' | \
-            sort -u > data/scope.txt
+            grep -E '^[a-z0-9][a-z0-9.-]+\.[a-z]{2,}$' | \
+            sort -u > data/scope.txt; then
+            echo "[!] Failed to fetch scope. Exiting."
+            exit 1
+          fi
 
           DOMAIN_COUNT=$(wc -l < data/scope.txt)
-          echo "[+] Scope loaded successfully. Total unique root domains to process: $DOMAIN_COUNT"
-          echo "First 5 domains to be processed:"
-          head -n 5 data/scope.txt
+          if [ "$DOMAIN_COUNT" -eq 0 ]; then
+            echo "[!] Scope file is empty. Exiting."
+            exit 1
+          fi
+
+          echo "[+] Scope loaded. Total unique root domains: $DOMAIN_COUNT"
+          echo ""
+          cat data/scope.txt
 
       # --------------------------------------------------
-      # 5. Enumerate and Detect New Subdomains (Per Domain)
+      # 5. Enumerate and Detect New Subdomains
       # --------------------------------------------------
       - name: Enumerate and Detect New Subdomains
         run: |
@@ -79,100 +104,285 @@ jobs:
           echo "        STARTING MONITORING"
           echo "======================================"
 
-          # FIX: Robust while loop that handles files with or without trailing newlines
+          TOTAL_NEW=0
+          SUCCESS_COUNT=0
+          FAILED_COUNT=0
+          FAILED_DOMAINS_LIST=""
+
+          # FIX: IFS= read -r + || [ -n "$domain" ] handles:
+          #   - lines with spaces/special chars
+          #   - last line without trailing newline
           while IFS= read -r domain || [ -n "$domain" ]; do
             [ -z "$domain" ] && continue
-            
+
             echo ""
+            echo "--------------------------------------"
             echo "[*] Processing: $domain"
-            
-            # 1. Enumerate
-            subfinder -d "$domain" -silent -all -o "results/current_${domain}.txt" || true
-            
-            # 2. Clean and normalize (with safety check)
-            if [ -f "results/current_${domain}.txt" ]; then
+            echo "--------------------------------------"
+
+            # FIX: touch all expected output files upfront
+            # This ensures comm never fails due to missing files
+            touch "results/current_${domain}.txt"
+            touch "results/current_clean_${domain}.txt"
+            touch "results/new_${domain}.txt"
+
+            # Ensure baseline exists and is sorted
+            touch "data/baseline/${domain}.txt"
+            sort -u "data/baseline/${domain}.txt" -o "data/baseline/${domain}.txt"
+
+            # ---- STEP 1: Subfinder ----
+            echo "    [1/4] Running subfinder..."
+
+            # FIX: timeout 300 prevents any single domain from hanging the whole job
+            # FIX: stderr goes to log file, not console noise
+            if ! timeout 300 subfinder \
+                -d "$domain" \
+                -silent \
+                -all \
+                -timeout 30 \
+                -rate-limit 10 \
+                -o "results/current_${domain}.txt" \
+                2>"logs/subfinder_${domain}.log"; then
+
+              SUBFINDER_EXIT=$?
+              if [ "$SUBFINDER_EXIT" -eq 124 ]; then
+                echo "    [!] subfinder timed out for $domain (>5min) — partial results used"
+              else
+                echo "    [!] subfinder error for $domain (exit $SUBFINDER_EXIT) — continuing"
+              fi
+              FAILED_DOMAINS_LIST="$FAILED_DOMAINS_LIST\n  - $domain (subfinder exit $SUBFINDER_EXIT)"
+              FAILED_COUNT=$((FAILED_COUNT + 1))
+            fi
+
+            # ---- STEP 2: Clean and normalize subfinder output ----
+            echo "    [2/4] Cleaning results..."
+
+            if [ -s "results/current_${domain}.txt" ]; then
               sed 's/\r$//' "results/current_${domain}.txt" | \
                 tr '[:upper:]' '[:lower:]' | \
                 sed 's/\.$//' | \
+                # FIX: regex filter removes garbage lines (IPs, empty lines, invalid entries)
+                grep -E "^([a-z0-9]([a-z0-9-]*[a-z0-9])?\.)+[a-z]{2,}$" | \
                 sort -u > "results/current_clean_${domain}.txt"
+
+              TOTAL_FOUND=$(wc -l < "results/current_clean_${domain}.txt")
+              echo "    [*] Total subdomains enumerated: $TOTAL_FOUND"
+              SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
             else
-              touch "results/current_clean_${domain}.txt"
+              echo "    [-] No subdomains returned by subfinder."
             fi
-            
-            # 3. Ensure baseline exists
-            touch "data/baseline/${domain}.txt"
+
+            # ---- STEP 3: Diff against baseline ----
+            echo "    [3/4] Comparing with baseline..."
+
+            # FIX: explicit sort before comm to guarantee correct comparison
+            sort -u "results/current_clean_${domain}.txt" -o "results/current_clean_${domain}.txt"
             sort -u "data/baseline/${domain}.txt" -o "data/baseline/${domain}.txt"
-            
-            # 4. Find NEW subdomains only
-            comm -13 "data/baseline/${domain}.txt" "results/current_clean_${domain}.txt" > "results/new_${domain}.txt"
-            
-            # 5. If new subdomains found, probe with httpx
-            if [ -s "results/new_${domain}.txt" ]; then
-              echo "    [+] New subdomains found for $domain! Probing with httpx..."
-              httpx -l "results/new_${domain}.txt" -silent -status-code -title -tech-detect -content-length \
-                -o "results/new_${domain}_httpx.txt" || true
-              
+
+            comm -13 \
+              "data/baseline/${domain}.txt" \
+              "results/current_clean_${domain}.txt" \
+              > "results/new_${domain}.txt" 2>/dev/null || true
+
+            NEW_COUNT=$(wc -l < "results/new_${domain}.txt")
+
+            if [ "$NEW_COUNT" -gt 0 ]; then
+              TOTAL_NEW=$((TOTAL_NEW + NEW_COUNT))
+              echo "    [+] $NEW_COUNT new subdomains discovered!"
+
+              # ---- STEP 3b: DNS resolution (filter dead subdomains) ----
+              echo "    [*] Validating DNS with dnsx..."
+              dnsx -l "results/new_${domain}.txt" \
+                -silent \
+                -a \
+                -resp \
+                -o "results/resolved_${domain}.txt" \
+                2>>"logs/dnsx_${domain}.log" || true
+
+              RESOLVED_COUNT=$(wc -l < "results/resolved_${domain}.txt" 2>/dev/null || echo 0)
+              echo "    [*] DNS-resolved: $RESOLVED_COUNT / $NEW_COUNT"
+
+              # Use resolved list if it has results, otherwise fall back to full list
+              if [ -s "results/resolved_${domain}.txt" ]; then
+                # Extract just hostnames from dnsx output (format: "host [IP]")
+                awk '{print $1}' "results/resolved_${domain}.txt" | \
+                  sort -u > "results/probe_input_${domain}.txt"
+              else
+                cp "results/new_${domain}.txt" "results/probe_input_${domain}.txt"
+              fi
+
+              # ---- STEP 4: httpx probing ----
+              echo "    [4/4] Probing with httpx..."
+
+              httpx \
+                -l "results/probe_input_${domain}.txt" \
+                -silent \
+                -status-code \
+                -title \
+                -tech-detect \
+                -content-length \
+                -follow-redirects \
+                -no-color \
+                -timeout 10 \
+                -retries 2 \
+                -rate-limit 50 \
+                -o "results/httpx_${domain}.txt" \
+                2>>"logs/httpx_${domain}.log" || true
+
               echo "    [HTTPX Results for $domain]:"
-              cat "results/new_${domain}_httpx.txt" || true
+              if [ -s "results/httpx_${domain}.txt" ]; then
+                cat "results/httpx_${domain}.txt"
+              else
+                echo "    [-] No HTTP responses from new subdomains."
+              fi
             else
               echo "    [-] No new subdomains for $domain."
+              # Still need step 4 placeholder
+              touch "results/httpx_${domain}.txt"
             fi
-            
-            # 6. Update baseline for this domain
+
+            # ---- Update baseline ----
             cat "results/current_clean_${domain}.txt" >> "data/baseline/${domain}.txt"
             sort -u "data/baseline/${domain}.txt" -o "data/baseline/${domain}.txt"
-            
+
           done < data/scope.txt
+
+          echo ""
+          echo "======================================"
+          echo "        MONITORING COMPLETE"
+          echo "======================================"
+          echo "[+] Domains processed successfully : $SUCCESS_COUNT"
+          echo "[!] Domains with issues            : $FAILED_COUNT"
+          echo "[*] Total NEW subdomains found     : $TOTAL_NEW"
+
+          # Save stats for report
+          echo "$TOTAL_NEW"    > results/stats_total_new.txt
+          echo "$SUCCESS_COUNT" > results/stats_success.txt
+          echo "$FAILED_COUNT"  > results/stats_failed.txt
+          printf "$FAILED_DOMAINS_LIST" > results/stats_failed_list.txt
 
       # --------------------------------------------------
       # 6. Generate Consolidated Report
       # --------------------------------------------------
       - name: Generate Consolidated Report
         run: |
+          TOTAL_NEW=$(cat results/stats_total_new.txt 2>/dev/null || echo 0)
+          SUCCESS=$(cat results/stats_success.txt 2>/dev/null || echo 0)
+          FAILED=$(cat results/stats_failed.txt 2>/dev/null || echo 0)
+          SCOPE_URL="${{ github.event.inputs.custom_scope_url }}"
+          SCOPE_URL="${SCOPE_URL:-$DEFAULT_SCOPE_URL}"
+
           {
             echo "# 🛡️ Swisscom Subdomain Monitor Report"
-            echo "**Date:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-            echo "**Scope Source:** ${{ github.event.inputs.custom_scope_url || 'Default Swisscom Scope' }}"
             echo ""
+            echo "| Field | Value |"
+            echo "|---|---|"
+            echo "| 📅 Date | $(date -u '+%Y-%m-%d %H:%M:%S UTC') |"
+            echo "| 🔗 Scope Source | \`$SCOPE_URL\` |"
+            echo "| ✅ Domains OK | $SUCCESS |"
+            echo "| ❌ Domains Failed | $FAILED |"
+            echo "| 🆕 New Subdomains | **$TOTAL_NEW** |"
+            echo ""
+
+            if [ -s "results/stats_failed_list.txt" ]; then
+              echo "## ⚠️ Domains With Issues"
+              echo ""
+              cat results/stats_failed_list.txt
+              echo ""
+            fi
+
             echo "## 🆕 New Subdomains Discovered"
             echo ""
-            
+
             FOUND_ANY=false
-            while IFS= read -r domain || [ -n "$domain" ]; do
-              [ -z "$domain" ] && continue
-              if [ -s "results/new_${domain}_httpx.txt" ]; then
+            TOTAL_HTTP=0
+            for domain in $(cat data/scope.txt); do
+              NEW_FILE="results/new_${domain}.txt"
+              HTTPX_FILE="results/httpx_${domain}.txt"
+
+              if [ -s "$NEW_FILE" ]; then
                 FOUND_ANY=true
-                echo "### 🔹 $domain"
-                echo '```text'
-                cat "results/new_${domain}_httpx.txt"
+                NEW_COUNT=$(wc -l < "$NEW_FILE")
+                HTTP_COUNT=$(wc -l < "$HTTPX_FILE" 2>/dev/null || echo 0)
+                TOTAL_HTTP=$((TOTAL_HTTP + HTTP_COUNT))
+
+                echo "### 🔹 $domain (+$NEW_COUNT new, $HTTP_COUNT HTTP-alive)"
+                echo ""
+                echo "**All new subdomains:**"
+                echo '```'
+                cat "$NEW_FILE"
                 echo '```'
                 echo ""
+
+                if [ -s "$HTTPX_FILE" ]; then
+                  echo "**HTTP-alive (httpx results):**"
+                  echo '```'
+                  cat "$HTTPX_FILE"
+                  echo '```'
+                fi
+                echo ""
               fi
-            done < data/scope.txt
-            
+            done
+
             if [ "$FOUND_ANY" = false ]; then
               echo "✅ No new subdomains found in this run."
+            else
+              echo "---"
+              echo "> 📊 **Summary:** $TOTAL_NEW new subdomains found, $TOTAL_HTTP are HTTP-alive."
             fi
+
           } > results/CONSOLIDATED_REPORT.md
 
           echo ""
           echo "======================================"
-          echo "        REPORT SUMMARY"
-          echo "======================================"
           cat results/CONSOLIDATED_REPORT.md
 
       # --------------------------------------------------
-      # 7. Upload results as GitHub Artifact
+      # 7. Telegram Notification (optional)
+      # --------------------------------------------------
+      - name: Send Telegram Notification
+        if: >
+          secrets.TELEGRAM_BOT_TOKEN != '' &&
+          secrets.TELEGRAM_CHAT_ID != '' &&
+          github.event.inputs.notify_telegram != 'false'
+        run: |
+          TOTAL_NEW=$(cat results/stats_total_new.txt 2>/dev/null || echo 0)
+
+          if [ "$TOTAL_NEW" -gt 0 ]; then
+            MESSAGE="🛡️ *Swisscom Monitor Alert*%0A"
+            MESSAGE="${MESSAGE}📅 $(date -u '+%Y-%m-%d %H:%M UTC')%0A"
+            MESSAGE="${MESSAGE}🆕 *$TOTAL_NEW new subdomains found!*%0A%0A"
+
+            for domain in $(cat data/scope.txt); do
+              if [ -s "results/new_${domain}.txt" ]; then
+                COUNT=$(wc -l < "results/new_${domain}.txt")
+                MESSAGE="${MESSAGE}🔹 \`$domain\` → +$COUNT new%0A"
+              fi
+            done
+
+            curl -sS "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+              -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}" \
+              -d "text=${MESSAGE}" \
+              -d "parse_mode=Markdown" > /dev/null
+            echo "[+] Telegram notification sent."
+          else
+            echo "[-] No new findings — skipping notification."
+          fi
+
+      # --------------------------------------------------
+      # 8. Upload Results as GitHub Artifact
       # --------------------------------------------------
       - name: Upload results
         uses: actions/upload-artifact@v4
         with:
-          name: swisscom-subdomain-results-${{ github.run_number }}
-          path: results/
-          retention-days: 14
+          name: swisscom-results-${{ github.run_number }}
+          path: |
+            results/
+            logs/
+          retention-days: 30
 
       # --------------------------------------------------
-      # 8. Commit updated baselines
+      # 9. Commit Updated Baselines
       # --------------------------------------------------
       - name: Commit updated baselines
         run: |
@@ -184,6 +394,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "[-] No baseline changes to commit."
           else
-            git commit -m "chore: update subdomain baselines for Swisscom scope"
+            TOTAL_NEW=$(cat results/stats_total_new.txt 2>/dev/null || echo 0)
+            git commit -m "chore: update subdomain baselines — $TOTAL_NEW new found [$(date -u '+%Y-%m-%d')]"
             git push
           fi
