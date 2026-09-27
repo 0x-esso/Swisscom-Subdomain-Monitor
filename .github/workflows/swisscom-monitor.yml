@@ -68,10 +68,11 @@ jobs:
 
           echo "[*] Fetching scope from: $SCOPE_URL"
 
-          # FIX: -f flag on curl to fail on HTTP errors, not silently produce empty file
+          # جيب الـ wildcards بس (السطور اللي بتبدأ بـ *.) وشيل الـ *.
           if ! curl -sSfL "$SCOPE_URL" | \
             grep -v '^\s*#' | \
             grep -v '^\s*$' | \
+            grep '^\*\.' | \
             sed 's/^\*\.//' | \
             sed 's/\.$//' | \
             tr '[:upper:]' '[:lower:]' | \
