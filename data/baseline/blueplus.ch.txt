@@ -1,0 +1,12 @@
+api.blueplus.ch
+cdn.blueplus.ch
+click.mail.blueplus.ch
+cloud.mail.blueplus.ch
+dev-api.blueplus.ch
+image.mail.blueplus.ch
+int-api.blueplus.ch
+mta.mail.blueplus.ch
+so.blueplus.ch
+sta-api.blueplus.ch
+view.mail.blueplus.ch
+www.blueplus.ch
