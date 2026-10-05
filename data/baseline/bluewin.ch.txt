@@ -271,6 +271,7 @@
 1787.eth-trunk20.lssmb00p-cgn002.bluewin.ch
 1787.eth-trunk20.zhbmb00p-cgn001.bluewin.ch
 1787.eth-trunk20.zhbmb00p-cgn002.bluewin.ch
+3dwww.bluewin.ch
 738.bundle-ether120.zhbmbbbp-msn001.bluewin.ch
 738.bundle-ether120.zhbmbbbp-msn002.bluewin.ch
 739.bundle-ether120.zhbmbbbp-msn001.bluewin.ch
@@ -1950,6 +1951,7 @@ www-stag.bluewin.ch
 www.autoconfig.bluewin.ch
 www.autodiscover.bluewin.ch
 www.bluewin.ch
+www.boerse.bluewin.ch
 www.contentstage.bluewin.ch
 www.cq.int.bluewin.ch
 www.dev.bluewin.ch
@@ -2003,6 +2005,9 @@ www.vimdzget-xsgn01.bluewin.ch
 www.vimdzget-xsgn02.bluewin.ch
 www.webmail-mx9.bluewin.ch
 www.webmailstg.bluewin.ch
+www1.bluewin.ch
+www2.bluewin.ch
+www3.bluewin.ch
 xmpp.rms.bluewin.ch
 xmpp.rmsqa.bluewin.ch
 xtrazone.sso.bluewin.ch
