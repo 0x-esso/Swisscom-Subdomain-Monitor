@@ -41,6 +41,7 @@
 0a3f3054039f38ab218a11650a6f0cc0.ajila.com
 15.ajila.com
 15216dcd633cd3c141a853b3ddd8fda5.ajila.com
+15216dcd633cd3c141a853b3ddd8fda55.ajila.com
 162cac7a552c8bfca9f3ed96d92cf1c0.ajila.com
 162cac7a552c8bfca9f3ed96d92cf1c0g.ajila.com
 1d6462399083b2b9a2c9d86f1ca02c23.ajila.com
@@ -129,6 +130,7 @@ agendamentogalois.ajila.com
 agendamentogaloisq.ajila.com
 agiosa.ajila.com
 agm-1036093344663c.ajila.com
+agmar-host.ajila.com
 agmar-host7.ajila.com
 agsseresgr002d365blda2b45c6b3e6f1108ecom.ajila.com
 agsseresgr002d365blda2b45c6b3e6f1108ecom3.ajila.com
@@ -210,6 +212,7 @@ argocd.ajila.com
 art-linkc.ajila.com
 art-service.ajila.com
 art-servicei.ajila.com
+arthursit.ajila.com
 arthursitu.ajila.com
 articles-dev.ajila.com
 articles-devs.ajila.com
@@ -230,6 +233,7 @@ ats-dev.ajila.com
 ats-dev02.ajila.com
 ats-dev02o.ajila.com
 atvshafts.ajila.com
+atvshaftsw.ajila.com
 auth.ajila.com
 author-apac-stage.ajila.com
 autodiscover.ajila.com
@@ -370,6 +374,7 @@ device3010566-3897e300-local.ajila.com
 device3010566-3897e300-localg.ajila.com
 device3028291-08c1adc2.ajila.com
 device3028291-08c1adc2g.ajila.com
+device3047993-1c5363c0.ajila.com
 device3047993-1c5363c0g.ajila.com
 device3048021-1bead788.ajila.com
 device3048788-23bb9887.ajila.com
@@ -418,8 +423,10 @@ dfw-vpec02.ajila.com
 dfw-vpec02u.ajila.com
 dgp-vm-mx-02y.dgp.ajila.com
 dgp.ajila.com
+dhasp.ajila.com
 dhcp-143-25.ajila.com
 dhcp-143-25a.ajila.com
+dhcp-143-45.ajila.com
 dhcp-143-45a.ajila.com
 dhcp-149-66.ajila.com
 dhcp-160-172.ajila.com
@@ -471,6 +478,7 @@ dunmore.ajila.com
 dyn.ajila.com
 dynamic.ajila.com
 dynflare.ajila.com
+dynflarec.ajila.com
 dyson.ajila.com
 e2klab.ajila.com
 e2klaba.ajila.com
@@ -495,6 +503,7 @@ eo.ajila.com
 epvh.ajila.com
 era.ajila.com
 esd.ajila.com
+estrela.ajila.com
 et-cip.ajila.com
 et-cip9.ajila.com
 eu-2.ajila.com
@@ -522,6 +531,7 @@ fwawsusw2bvsingressp01.ajila.com
 fwawsusw2bvsingressp01w.ajila.com
 fx.ajila.com
 ga-duo.ajila.com
+ga-duo7.ajila.com
 ga.ajila.com
 galilee.ajila.com
 gjdev.ajila.com
@@ -599,11 +609,13 @@ myaccountdev3.ajila.com
 myaccountdev5.ajila.com
 myaccountdev6.ajila.com
 mygasb.ajila.com
+myhrmsuat.ajila.com
 myitcrmtest.ajila.com
 mykedai.ajila.com
 mylinkinvitation.ajila.com
 mymail-china.ajila.com
 mymail-sec.ajila.com
+mymail-stage.ajila.com
 mymariogames1ghjsqw.ajila.com
 mynasbird.ajila.com
 mynasbirdi.ajila.com
@@ -652,6 +664,7 @@ sign.finma.ajila.com
 sign.hr.ajila.com
 sign7.finma.ajila.com
 sinamont.ajila.com
+sis2k.ajila.com
 sjessop.ajila.com
 sky.ajila.com
 smarttv4free.ajila.com
@@ -753,9 +766,11 @@ wireless0.ajila.com
 wireless00.ajila.com
 wireless1-205.ajila.com
 wireless1-21.ajila.com
+wireless1-226.ajila.com
 wireless1-227.ajila.com
 wireless1-228.ajila.com
 wireless1-244.ajila.com
+wireless125.ajila.com
 wireless133.ajila.com
 wireless143.ajila.com
 wireless153.ajila.com
@@ -774,6 +789,7 @@ wjang.ajila.com
 wjmc.ajila.com
 wks171.ajila.com
 wlan.ajila.com
+wlan2-17.ajila.com
 wlapa2.ajila.com
 wlc02.ajila.com
 wldcnexc01.ajila.com
@@ -808,6 +824,7 @@ ww21.ajila.com
 ww4server.ajila.com
 wwaccess.ajila.com
 wwfrh-fw01.ajila.com
+wwpj.ajila.com
 www-gbms-dlr.ajila.com
 www-vinopalovi.ajila.com
 www-wiwi.ajila.com
@@ -831,6 +848,7 @@ www.forms.experience.ajila.com
 www.ga-duo.ajila.com
 www.help.ajila.com
 www.hr-box.ajila.com
+www.hr.ajila.com
 www.hrbox.ajila.com
 www.intranet.ajila.com
 www.jira.ajila.com
