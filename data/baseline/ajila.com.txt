@@ -98,6 +98,7 @@ aaew-dev.ajila.com
 aaew-dev7.ajila.com
 acacia.ajila.com
 acacia7.ajila.com
+acadtech37.ajila.com
 acadtech37q.ajila.com
 accordhealthcare.ajila.com
 accordia.ajila.com
@@ -192,6 +193,7 @@ apichat147.ajila.com
 apirouter.ajila.com
 apis-l-stage.ajila.com
 apis-l-stagei.ajila.com
+apis-portal-pre.ajila.com
 applenet.ajila.com
 appleneta.ajila.com
 applynowdev.ajila.com
@@ -262,6 +264,7 @@ azuregateway-d28b0067-7d5a-4680-90f1-e01579784b21-7138e1707104.ajila.com
 azuregateway-d6650033-9607-4226-9fec-70f4b01f4233-f3ba7ef98d95.ajila.com
 azuregateway-f0dd0077-1771-49cc-9562-ac83bc4bb689-ca04e54d9dd0.ajila.com
 azuregateway-f0e70068-1ee2-4e43-9c71-825a0219150e-d88766fe58d2.ajila.com
+azuregateway-f122410d-9db8-49fb-95b4-b28cdd4a1a11-7f21cf787776.ajila.com
 b284657-dev-eastus-1133e895.ajila.com
 b284657-dev-eastus-1133e895a.ajila.com
 b2ckiki.ajila.com
@@ -368,6 +371,7 @@ device2989992-2ca6fe56-localk.ajila.com
 device3004656-75d8d642-local.ajila.com
 device3004656-75d8d642-localg.ajila.com
 device3010143-419056cb-local.ajila.com
+device3010143-419056cb-localg.ajila.com
 device3010143-419056cb.ajila.com
 device3010143-419056cbc.ajila.com
 device3010566-3897e300-local.ajila.com
@@ -508,6 +512,7 @@ et-cip.ajila.com
 et-cip9.ajila.com
 eu-2.ajila.com
 experience.ajila.com
+experiencew.ajila.com
 experienciainspiradora.com.ajila.com
 felk.ajila.com
 files.ajila.com
@@ -713,6 +718,7 @@ vpn-swisscom.ajila.com
 vpn.ajila.com
 vr22494.ajila.com
 vr22849.ajila.com
+vr23007.ajila.com
 w.ajila.com
 waf.ajila.com
 welcome-aboard-sc1.ajila.com
@@ -797,6 +803,7 @@ wliia.ajila.com
 wlrbd02fxv.ajila.com
 won983212.ajila.com
 woodfamily.ajila.com
+workbench.ajila.com
 workflows-nonprod-us-east-2.ajila.com
 workforce1.ajila.com
 working-coyote-k8s-bf6b585c.ajila.com
@@ -809,6 +816,7 @@ workspacehznx6.ajila.com
 workspacehzsx1.ajila.com
 workspacehzusw01.ajila.com
 worldsfairs.ajila.com
+wp-po-dev.ajila.com
 wpc.ajila.com
 wqe.ajila.com
 wqhzwkrdm.ajila.com
@@ -879,6 +887,7 @@ wwwaagt10.ajila.com
 wwwdepl.ajila.com
 wwwws1.ajila.com
 wx.ajila.com
+wxcs.ajila.com
 wxhk.ajila.com
 wxmp1.ajila.com
 wxws.ajila.com
