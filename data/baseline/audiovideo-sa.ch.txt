@@ -1,5 +1,8 @@
 autodiscover.audiovideo-sa.ch
+hostmaster.audiovideo-sa.ch
 mail.audiovideo-sa.ch
 mailsg.audiovideo-sa.ch
 www.audiovideo-sa.ch
+www.autodiscover.audiovideo-sa.ch
 www.mailsg.audiovideo-sa.ch
+wwwq.audiovideo-sa.ch
