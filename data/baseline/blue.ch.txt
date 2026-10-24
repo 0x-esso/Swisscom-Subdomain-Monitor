@@ -29,6 +29,7 @@ demoticketstamp.blue.ch
 demowebservices.blue.ch
 dev-api.blue.ch
 dev.blue.ch
+dev.fallback.tv.blue.ch
 dev.tv.blue.ch
 eiu6l9ytnzgvanrdxmwfcue8wslkjry5jovx1pqm.blue.ch
 enterpriseenrollment.blue.ch
@@ -43,6 +44,7 @@ guide.more.blue.ch
 image.mail.blue.ch
 int-api.blue.ch
 int.blue.ch
+int.fallback.tv.blue.ch
 int.tv.blue.ch
 interflex.blue.ch
 jenkins.blue.ch
@@ -73,6 +75,7 @@ servicedesk7.blue.ch
 so.blue.ch
 sta-api.blue.ch
 sta.blue.ch
+sta.fallback.tv.blue.ch
 sta.tv.blue.ch
 storage.blue.ch
 storage.dev.blue.ch
