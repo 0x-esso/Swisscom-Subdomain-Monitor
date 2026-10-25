@@ -1,4 +1,16 @@
+ads.bluenews.ch
+adserver.bluenews.ch
+adservers.bluenews.ch
+blobe.core.bluenews.ch
+cdn.bluenews.ch
 community.bluenews.ch
+core.bluenews.ch
+corea.bluenews.ch
+egpkm6okihb17wefvstc5tafxgzsxwylo0vaqjrb.bluenews.ch
+files.bluenews.ch
 so.bluenews.ch
 sportcenter.bluenews.ch
 www.bluenews.ch
+www.community.bluenews.ch
+www.so.bluenews.ch
+www.sportcenter.bluenews.ch
