@@ -1,4 +1,10 @@
+gitlab.cablex-toolbox.ch
 netzbau.cablex-toolbox.ch
+ns1.cablex-toolbox.ch
 sar.cablex-toolbox.ch
+sql.cablex-toolbox.ch
+v3.cablex-toolbox.ch
+video.cablex-toolbox.ch
+www.cablex-toolbox.ch
 www.netzbau.cablex-toolbox.ch
 www.sar.cablex-toolbox.ch
