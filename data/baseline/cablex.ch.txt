@@ -6,6 +6,7 @@ autodiscover.sb.cablex.ch
 autodiscover.www.sb.cablex.ch
 autodiscoverwww.sb.cablex.ch
 bilder.cablex.ch
+blog.cablex.ch
 brand.cablex.ch
 cis-test-www.sb.cablex.ch
 cis-test.cablex.ch
@@ -25,6 +26,7 @@ com-qual.www.sb.cablex.ch
 confluence.www.dating.twfmcx.www.sb.cablex.ch
 cxapp-dev.cablex.ch
 cxapp.cablex.ch
+data.cablex.ch
 derp.cablex.ch
 dev.cablex.ch
 docgenie-abnahme-int.cablex.ch
@@ -38,6 +40,7 @@ docs-int.cablex.ch
 docs-sap-int.cablex.ch
 docs-sap.cablex.ch
 docs.cablex.ch
+edge.cablex.ch
 email.news.cablex.ch
 esp.lincoln.com-qual.www.sb.cablex.ch
 ewfmmob-www.sb.cablex.ch
@@ -54,6 +57,7 @@ fiori.www.sb.cablex.ch
 fioriwww.sb.cablex.ch
 geburtstagsshop-test.cablex.ch
 geburtstagsshop.cablex.ch
+gitlab.cablex.ch
 intranet-int.cablex.ch
 intranet.cablex.ch
 l.cablex.ch
@@ -64,7 +68,9 @@ lcms.sb.cablex.ch
 lcms.www.sb.cablex.ch
 lcmswww.sb.cablex.ch
 lincoln.com-qual.www.sb.cablex.ch
+m.cablex.ch
 manualtest-int.cablex.ch
+monitor.cablex.ch
 news-www.sb.cablex.ch
 news.cablex.ch
 news.sb.cablex.ch
@@ -75,6 +81,7 @@ newsletter.sb.cablex.ch
 newsletter.www.sb.cablex.ch
 newsletterwww.sb.cablex.ch
 newswww.sb.cablex.ch
+ns1.cablex.ch
 nwbc-prod.cablex.ch
 nwbc-qual-www.sb.cablex.ch
 nwbc-qual.cablex.ch
@@ -121,6 +128,7 @@ srm.sb.cablex.ch
 srm.www.sb.cablex.ch
 srmwww.sb.cablex.ch
 staging.esp.lincoln.com-qual.www.sb.cablex.ch
+status.cablex.ch
 sunriseportal-www.sb.cablex.ch
 sunriseportal.cablex.ch
 sunriseportal.sb.cablex.ch
@@ -142,6 +150,7 @@ twfmmob.www.sb.cablex.ch
 twfmmobwww.sb.cablex.ch
 wfmcx.cablex.ch
 wfmmob.cablex.ch
+wildcard.sb.cablex.ch
 wp.cablex.ch
 www--2.sb.cablex.ch
 www--5.sb.cablex.ch
