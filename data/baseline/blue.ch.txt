@@ -9,6 +9,8 @@ cinemanws.blue.ch
 click.mail.blue.ch
 click9.mail.blue.ch
 cloud.mail.blue.ch
+cms-files-sta.blue.ch
+cms-files.blue.ch
 content.blue.ch
 cp.blue.ch
 customercare.blue.ch
