@@ -16,6 +16,7 @@ files.blueplus.ch
 image.mail.blueplus.ch
 int-api.blueplus.ch
 int-apic.blueplus.ch
+int.blueplus.ch
 mail.blueplus.ch
 mailc.blueplus.ch
 mta.mail.blueplus.ch
@@ -24,6 +25,7 @@ ns4.blueplus.ch
 so.blueplus.ch
 sta-api.blueplus.ch
 sta-api3.blueplus.ch
+sta.blueplus.ch
 view.mail.blueplus.ch
 www.api.blueplus.ch
 www.blueplus.ch
