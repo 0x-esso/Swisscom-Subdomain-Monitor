@@ -54,6 +54,7 @@ interflex.blue.ch
 jenkins.blue.ch
 link.blue.ch
 login.blue.ch
+login.tv.blue.ch
 lyncdiscover.blue.ch
 mail.blue.ch
 matchmaker.blue.ch
@@ -80,6 +81,7 @@ so.blue.ch
 sta-api.blue.ch
 sta.blue.ch
 sta.fallback.tv.blue.ch
+sta.login.tv.blue.ch
 sta.tv.blue.ch
 storage.blue.ch
 storage.dev.blue.ch
