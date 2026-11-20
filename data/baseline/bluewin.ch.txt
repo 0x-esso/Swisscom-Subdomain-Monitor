@@ -12,6 +12,7 @@
 1000k.gi0-0.lssmb00p-smha01.bluewin.ch
 1003.bundle-ether31.lssmbbbp-msn001.bluewin.ch
 100k.gigabitethernet0-0.lssms00p-rtvp01.bluewin.ch
+100k.ten0-2-0-3.ipc-zhb790-m-pe-29.bluewin.ch
 100q.ten0-5-0-2.ipc-lss690-m-pe-29.bluewin.ch
 100q.tengige0-5-0-7.lssmbbbp-msn001.bluewin.ch
 101.bundle-ether32.lssmbbbp-msn002.bluewin.ch
@@ -92,6 +93,7 @@
 1106u.bundle-ether160.lssmbbbp-msn001.bluewin.ch
 1106u.bundle-ether160.lssmbbbp-msn002.bluewin.ch
 1106u.bundle-ether160.zhbmbbbp-msn001.bluewin.ch
+1106u.bundle-ether160.zhbmbbbp-msn002.bluewin.ch
 1106u.port-channel160.lssdz00p-rtdi02.bluewin.ch
 1106u.port-channel160.zhbdz02p-rtdi01.bluewin.ch
 1106u.port-channel160.zhbdz02p-rtdi02.bluewin.ch
@@ -141,6 +143,7 @@
 1199.zhbic20p-isn002.bluewin.ch
 1199k.zhbic20p-ipn002.bluewin.ch
 119s.bundle-ether210.lssmb00p-rtdi02.bluewin.ch
+119s.bundle-ether210.zhbmb00p-rtdi01.bluewin.ch
 12.3.213.fix.bluewin.ch
 120-1110.ipc-lss690-m-pe.bluewin.ch
 120-1110.lssic20p-isn001.bluewin.ch
@@ -277,6 +280,7 @@
 1771m.bundle-ether2031.tmsb-lss-acc003.bluewin.ch
 1771m.bundle-ether2032.tmsb-lss-acc003.bluewin.ch
 1771m.bundle-ether2041.lssmbbbp-msn001.bluewin.ch
+1771m.bundle-ether2042.tmsb-lss-acc004.bluewin.ch
 1771m.bundle-ether2042.tmsb-zhb-acc004.bluewin.ch
 1771m.bundle-ether3002.zhbmbbbp-msn002.bluewin.ch
 1771m.port-channel1.lssms00p-risg02.bluewin.ch
@@ -342,6 +346,7 @@
 1772q.port-channel2.zhbms60p-risg02.bluewin.ch
 1772q.port-channel2.zhbms60p-risg03.bluewin.ch
 1772q.port-channel2.zhbms60p-risg06.bluewin.ch
+1772s.port-channel2.zhbms60p-risg01.bluewin.ch
 1772w.bundle-ether1011.zhbmbbbp-msn001.bluewin.ch
 1772w.bundle-ether1012.zhbmbbbp-msn002.bluewin.ch
 1772w.bundle-ether1021.lssmbbbp-msn001.bluewin.ch
@@ -370,6 +375,7 @@
 1774.eth-trunk20.zhbmb00p-cgn002.bluewin.ch
 1774a.bundle-ether20.lssmbbbp-msn001.bluewin.ch
 1774s.bundle-ether20.zhbmbbbp-msn001.bluewin.ch
+1774s.bundle-ether20.zhbmbbbp-msn002.bluewin.ch
 1774s.eth-trunk20.lssmb00p-cgn001.bluewin.ch
 1775.bundle-ether2011.lssmbbbp-msn001.bluewin.ch
 1775.bundle-ether2011.tmsb-lss-acc001.bluewin.ch
@@ -415,6 +421,7 @@
 1775w.bundle-ether2031.tmsb-lss-acc003.bluewin.ch
 1775w.bundle-ether2032.tmsb-lss-acc003.bluewin.ch
 1775w.bundle-ether2032.zhbmbbbp-msn002.bluewin.ch
+1775w.bundle-ether2042.tmsb-zhb-acc004.bluewin.ch
 1776le-ether2032w.tmsb-lss-acc003.bluewin.ch
 1777.bundle-ether31.lssmbbbp-msn001.bluewin.ch
 1777.bundle-ether31.zhbmbbbp-msn001.bluewin.ch
@@ -478,6 +485,7 @@
 1779q.port-channel1.zhbms60p-risg06.bluewin.ch
 1779q.port-channel2.lssms00p-risg03.bluewin.ch
 1779q.port-channel2.lssms00p-risg05.bluewin.ch
+1779q.port-channel2.zhbms60p-risg02.bluewin.ch
 1779q.port-channel2.zhbms60p-risg04.bluewin.ch
 1779q.port-channel2.zhbms60p-risg05.bluewin.ch
 1779s.port-channel2.zhbms60p-risg01.bluewin.ch
@@ -507,9 +515,11 @@
 1781.eth-trunk20.zhbmb00p-cgn002.bluewin.ch
 1781m.bundle-ether20.lssmbbbp-msn001.bluewin.ch
 1781m.eth-trunk20.zhbmb00p-cgn001.bluewin.ch
+1781s.bundle-ether20.lssmbbbp-msn002.bluewin.ch
 1781s.bundle-ether20.zhbmbbbp-msn001.bluewin.ch
 1781s.bundle-ether20.zhbmbbbp-msn002.bluewin.ch
 1783m.eth-trunk20.lssmb00p-cgn002.bluewin.ch
+1783m.eth-trunk20.zhbmb00p-cgn001.bluewin.ch
 1784.bundle-ether20.lssmbbbp-msn001.bluewin.ch
 1784.bundle-ether20.lssmbbbp-msn002.bluewin.ch
 1784.bundle-ether20.zhbmbbbp-msn001.bluewin.ch
@@ -527,6 +537,7 @@
 1785k.bundle-ether150.zhbmb00p-rtdi01.bluewin.ch
 1785k.bundle-ether150.zhbmbbbp-msn001.bluewin.ch
 1785m.bundle-ether150.lssmb00p-rtdi01.bluewin.ch
+1786.eth4.zhbmb00p-srac02.bluewin.ch
 1786k.bundle-ether150.lssmb00p-rtdi01.bluewin.ch
 1786k.port-channel141.zhbmb00p-rtha01.bluewin.ch
 1786m.eth-trunk20.lssmb00p-cgn002.bluewin.ch
@@ -548,8 +559,10 @@
 1787.eth-trunk20.lssmb00p-cgn002.bluewin.ch
 1787.eth-trunk20.zhbmb00p-cgn001.bluewin.ch
 1787.eth-trunk20.zhbmb00p-cgn002.bluewin.ch
+1787.eth4.zhbmb00p-srac01.bluewin.ch
 1787i.eth4.lssmb00p-srac01.bluewin.ch
 1787m.eth-trunk20.zhbmb00p-cgn001.bluewin.ch
+1787m.eth-trunk20.zhbmb00p-cgn002.bluewin.ch
 1787m.port-channel141.lssmb00p-rtha01.bluewin.ch
 1787s.bundle-ether20.lssmbbbp-msn002.bluewin.ch
 1787s.bundle-ether20.zhbmbbbp-msn002.bluewin.ch
@@ -574,6 +587,7 @@
 213.fix.bluewin.ch
 217.15.3.213.fix.bluewin.ch
 241-11m.3-213.fix.bluewin.ch
+245m.12.3.213.fix.bluewin.ch
 247-247.3-85.cust.bluewin.ch
 26-2dle-ether160k.lssmbbbp-msn001.bluewin.ch
 2s-mcws02.bluewin.ch
@@ -614,6 +628,7 @@
 9i.3.213.fix.bluewin.ch
 a-ps0zhb.bluewin.ch
 a.bluewin.ch
+a2c855c399de509f30d0755fde949f4d0a9c785f.rnas-dyn.bluewin.ch
 abusehq.bluewin.ch
 abusehqg.bluewin.ch
 abz.homepage.bluewin.ch
@@ -639,6 +654,7 @@ ae10.i69lss-005.bb.ip-plus.bluewin.ch
 ae10.ipc-lss690-m-pe-48.bluewin.ch
 ae10.ipc-zhb790-m-pe-48.bluewin.ch
 ae10c.i69lss-005.bb.ip-plus.bluewin.ch
+ae10q.ipc-zhb790-m-pe-48.bluewin.ch
 ae11.i79zhh-005.bb.ip-plus.bluewin.ch
 ae11.ipc-lss690-m-pe-48.bluewin.ch
 ae11.ipc-zhb790-m-pe-48.bluewin.ch
@@ -701,9 +717,11 @@ azure.email.bluewin.ch
 b.bluewin.ch
 babitswein.homepage.bluewin.ch
 backend.bluewin.ch
+badk.test.bluewin.ch
 banetzpsp-cns005.bluewin.ch
 barbet.homepage.bluewin.ch
 bbw.ip-plus.bluewin.ch
+bdgcfebic20p-ipn002.bluewin.ch
 be-110c.1199.zhbic20p-ipn002.bluewin.ch
 be-110c.1199.zhbic20p-isn001.bluewin.ch
 be10.i79zhb-005.bb.ip-plus.bluewin.ch
@@ -722,6 +740,7 @@ be100w.i69lss-025.ip-plus.bluewin.ch
 be101.i69lss-025.bb.ip-plus.bluewin.ch
 be101c.i69lss-025.ip-plus.bluewin.ch
 be101w.i69lss-025.bb.ip-plus.bluewin.ch
+be102.lssic20p-ipn001.bluewin.ch
 be102w.lssic20p-ipn002.bluewin.ch
 be11.i68geb-025.bb.ip-plus.bluewin.ch
 be110-1100.lssic20p-ipn001.bluewin.ch
@@ -732,6 +751,7 @@ be110-1100.zhbic20p-ipn001.bluewin.ch
 be110-1100.zhbic20p-ipn002.bluewin.ch
 be110-1100.zhbic20p-isn001.bluewin.ch
 be110-1100.zhbic20p-isn002.bluewin.ch
+be110-1100a.zhbic20p-ipn002.bluewin.ch
 be110-1100a.zhbic20p-isn001.bluewin.ch
 be110-1100a.zhbic20p-isn002.bluewin.ch
 be110-1110.lssic20p-ipn002.bluewin.ch
@@ -821,6 +841,7 @@ be120-1100a.ipc-zhb790-m-pe.bluewin.ch
 be120-1100a.zhbic20p-isn001.bluewin.ch
 be120-1100k.lssic20p-isn001.bluewin.ch
 be120-1101.ipc-lss690-m-pe.bluewin.ch
+be120-1101.ipc-zhb790-m-pe.bluewin.ch
 be120-1101.lssic20p-isn001.bluewin.ch
 be120-1101.lssic20p-isn002.bluewin.ch
 be120-1101a.ipc-zhb790-m-pe.bluewin.ch
@@ -882,6 +903,7 @@ be120w.zhbic20p-isn002.bluewin.ch
 be121-1001.ipc-lss690-m-pe-44.bluewin.ch
 be121-1001.ipc-zhb790-m-pe-44.bluewin.ch
 be121-1100.ipc-lss690-m-pe.bluewin.ch
+be121-1100.ipc-zhb790-m-pe.bluewin.ch
 be121-1101.ipc-lss690-m-pe.bluewin.ch
 be121-1101.ipc-zhb790-m-pe.bluewin.ch
 be121-1101a.ipc-lss690-m-pe.bluewin.ch
@@ -921,6 +943,7 @@ be130-1302.zhbic20p-ipn002.bluewin.ch
 be130-1302a.lssdz00p-rtdi02.bluewin.ch
 be130-1302a.lssic20p-ipn001.bluewin.ch
 be130-1302a.lssic20p-ipn002.bluewin.ch
+be130-1302a.zhbic20p-ipn001.bluewin.ch
 be130-1303.lssic20p-ipn001.bluewin.ch
 be130-1303.zhbdz02p-rtdi02.bluewin.ch
 be130-1303a.zhbic20p-ipn001.bluewin.ch
@@ -951,6 +974,7 @@ be140-1305a.lssic20p-ipn002.bluewin.ch
 be140-1305a.oltdz00p-rtdi01.bluewin.ch
 be141-1305a.oltdz00p-rtdi01.bluewin.ch
 be20-1110.lssic20p-ipn001.bluewin.ch
+be20-1110k.lssic20p-ipn001.bluewin.ch
 be20-1120.lssic20p-ipn001.bluewin.ch
 be20-1120.zhbic20p-cgn001.bluewin.ch
 be20-1120.zhbic20p-ipn001.bluewin.ch
@@ -1072,6 +1096,7 @@ bundle-ether1022w.lssmbbbp-msn002.bluewin.ch
 bundle-ether1031.lssmbbbp-msn001.bluewin.ch
 bundle-ether1032.lssmbbbp-msn002.bluewin.ch
 bundle-ether1032.zhbmbbbp-msn002.bluewin.ch
+bundle-ether1041.zhbmbbbp-msn001.bluewin.ch
 bundle-ether1042.lssmbbbp-msn002.bluewin.ch
 bundle-ether1042.zhbmbbbp-msn002.bluewin.ch
 bundle-ether1042w.lssmbbbp-msn002.bluewin.ch
@@ -1105,6 +1130,7 @@ bundle-ether160.lssmbbbp-msn002.bluewin.ch
 bundle-ether160.zhbmbbbp-msn001.bluewin.ch
 bundle-ether160.zhbmbbbp-msn002.bluewin.ch
 bundle-ether160u.lssmbbbp-msn001.bluewin.ch
+bundle-ether160u.lssmbbbp-msn002.bluewin.ch
 bundle-ether1991.zhbmbbbp-msn001.bluewin.ch
 bundle-ether1992.zhbmbbbp-msn002.bluewin.ch
 bundle-ether20.lssmbbbp-msn001.bluewin.ch
@@ -1156,6 +1182,7 @@ bundle-ether2031.tmsb-lss-acc003.bluewin.ch
 bundle-ether2031.tmsb-zhb-acc003.bluewin.ch
 bundle-ether2031.zhbmbbbp-msn001.bluewin.ch
 bundle-ether2031w.tmsb-zhb-acc003.bluewin.ch
+bundle-ether2031w.zhbmbbbp-msn001.bluewin.ch
 bundle-ether2032.lssmbbbp-msn002.bluewin.ch
 bundle-ether2032.tmsb-lss-acc003.bluewin.ch
 bundle-ether2032.tmsb-zhb-acc003.bluewin.ch
@@ -1207,6 +1234,7 @@ bvi1542.zhhdz00p-lbmsp1.bluewin.ch
 bvi1542.zhhdz00p-lbmsp2.bluewin.ch
 bw152zhb.bluewin.ch
 bw30zhh.bluewin.ch
+bw31zhh.bluewin.ch
 bw32zhh.bluewin.ch
 bw54zhb.bluewin.ch
 bw54zhh.bluewin.ch
@@ -1285,7 +1313,9 @@ bwntp.bluewin.ch
 bwntp1-old.bluewin.ch
 bwntp1.bluewin.ch
 bwntp1pool.bluewin.ch
+bwntp2-old.bluewin.ch
 bwntp2.bluewin.ch
+bwntp2gv.bluewin.ch
 bwntp2pool.bluewin.ch
 bwntp3.bluewin.ch
 bwntp4.bluewin.ch
@@ -1338,6 +1368,7 @@ cgn02.homepage.bluewin.ch
 ch.bluewin.ch
 chat.bluewin.ch
 chbc.bluewin.ch
+chch.bluewin.ch
 christinebrand9.homepage.bluewin.ch
 cia1.bluewin.ch
 cia100zhb.bluewin.ch
@@ -1479,6 +1510,7 @@ cq.test.bluewin.ch
 crazy-jack.homepage.bluewin.ch
 ctserver13.bluewin.ch
 ctserver2.bluewin.ch
+ctserver2s.bluewin.ch
 cust.bluewin.ch
 customer.yoomeezhh.bluewin.ch
 czhbdz20p-lb0002.bluewin.ch
@@ -1495,12 +1527,15 @@ data.email.bluewin.ch
 de.bluewin.ch
 delivery-dev.bluewin.ch
 demoa.test.bluewin.ch
+demon.bluewin.ch
 dev.bluewin.ch
 dev.login-test.bluewin.ch
 dhcp01.bluewin.ch
 dialin.bluewin.ch
+dkl.login-test.bluewin.ch
 dmzvarnish-int0.bluewin.ch
 dmzvarnish-int1.bluewin.ch
+dmzvarnish-int1k.bluewin.ch
 dmzvarnish-int2.bluewin.ch
 dmzvarnish-int3.bluewin.ch
 dmzvarnish-int4.bluewin.ch
@@ -1516,6 +1551,7 @@ dmzvarnish-test3.bluewin.ch
 dmzvarnish-test3m.bluewin.ch
 dmzvarnish-test4.bluewin.ch
 dmzvarnish.bluewin.ch
+dns.bluewin.ch
 dns1.bluewin.ch
 dns1cleanpipe.bluewin.ch
 dns2.bluewin.ch
@@ -1591,6 +1627,7 @@ eth-trunk20m.lssmb00p-cgn002.bluewin.ch
 eth-trunk20m.zhbmb00p-cgn001.bluewin.ch
 eth4.lssmb00p-srac01.bluewin.ch
 ether20.bluewin.ch
+ether210.bluewin.ch
 etht22-1140.lssic20p-cgn001.bluewin.ch
 etht22-1140.zhbic20p-cgn001.bluewin.ch
 etht22-1140a.lssic20p-cgn001.bluewin.ch
@@ -1621,6 +1658,7 @@ f1109m.toltdz00p-lb000x.bluewin.ch
 f1109m.tzhbdz20p-lb000x.bluewin.ch
 f1109m.tzhhdz00p-lb000x.bluewin.ch
 f1113.tzhbdz20p-lb000x.bluewin.ch
+f1113y.tzhbdz20p-lb000x.bluewin.ch
 f1121.toltdz00p-lb000x.bluewin.ch
 f1121y.tzhbdz20p-lb000x.bluewin.ch
 f1137.toltdz00p-lb000x.bluewin.ch
@@ -1653,6 +1691,7 @@ f1479.tzhhdz00p-lb000x.bluewin.ch
 f1479y.tzhhdz00p-lb000x.bluewin.ch
 f1480.tzhhdz00p-lb000x.bluewin.ch
 f1482.tzhhdz00p-lb000x.bluewin.ch
+f1482y.tzhhdz00p-lb000x.bluewin.ch
 f1484.tzhbdz20p-lb000x.bluewin.ch
 f1484y.tzhbdz20p-lb000x.bluewin.ch
 f1485.tzhbdz20p-lb000x.bluewin.ch
@@ -1664,12 +1703,15 @@ f1490.toltdz00p-lb000x.bluewin.ch
 f1490y.toltdz00p-lb000x.bluewin.ch
 f1492.tzhbdz20p-lb000x.bluewin.ch
 f1492.tzhhdz00p-lb000x.bluewin.ch
+f1492y.tzhhdz00p-lb000x.bluewin.ch
 f1493y.tzhhdz00p-lb000x.bluewin.ch
+f1494.tzhbdz20p-lb000x.bluewin.ch
 f1496.tzhhdz00p-lb000x.bluewin.ch
 f1497.tzhbdz20p-lb000x.bluewin.ch
 f1497.tzhhdz00p-lb000x.bluewin.ch
 f1497y.tzhhdz00p-lb000x.bluewin.ch
 f1498y.tzhbdz21t-lb000x.bluewin.ch
+f1499.tzhbdz21t-lb000x.bluewin.ch
 f1499y.tzhbdz21t-lb000x.bluewin.ch
 f1505.tzhbdz21t-lb000x.bluewin.ch
 f1505y.tzhbdz21t-lb000x.bluewin.ch
@@ -1780,6 +1822,7 @@ homeopathie.homepage.bluewin.ch
 homepage.bluewin.ch
 homepage9.3-213.fix.bluewin.ch
 homepagea.sam6.sso.bluewin.ch
+homepagei.bluewin.ch
 horex-spitfire.homepage.bluewin.ch
 horo.homepage.bluewin.ch
 hostmaster.bluewin.ch
@@ -1809,6 +1852,7 @@ hsif1-old.bluewin.ch
 hsif1-old5.bluewin.ch
 hsif1.bluewin.ch
 hsrp81.net1102.zhbdz21t-rtdi01.bluewin.ch
+hulu.bluewin.ch
 i-dnsn-blocko-1.bluewin.ch
 i62bsw-025.bb.ip-plus.bluewin.ch
 i69lss-005.bb.ip-plus.bluewin.ch
@@ -1823,6 +1867,7 @@ i79zhb-025.bb.ip-plus.bluewin.ch
 i79zhb-025c.bb.ip-plus.bluewin.ch
 i79zhb-030.bb.ip-plus.bluewin.ch
 i79zhb-030c.bb.ip-plus.bluewin.ch
+i79zhh-005.bb.ip-plus.bluewin.ch
 i79zhh-040c.bb.ip-plus.bluewin.ch
 icemc-s.bluewin.ch
 icemc.bluewin.ch
@@ -1932,6 +1977,8 @@ livemaps.bluewin.ch
 livia.homepage.bluewin.ch
 lo0.ttcp-olt-cp1-rttc01.bluewin.ch
 lo0.ttcp-olt-cp1-rttc02.bluewin.ch
+lo0.ttcp-zhh-cp1-rttc01.bluewin.ch
+lo0.ttcp-zhh-cp1-rttc02.bluewin.ch
 lo1.rbrt1zhb.bluewin.ch
 lo1.zhbdz09p-rtdi01.bluewin.ch
 lo1496.zhbdzvpp-rtvp01.bluewin.ch
@@ -1984,6 +2031,7 @@ lo1k.zhhdz09p-rtdi01.bluewin.ch
 lo2k.oltdz09p-rtdi02.bluewin.ch
 lo51.zhbdz20p-rtdi01.bluewin.ch
 lo51.zhbdz20p-rtdi02.bluewin.ch
+lo51k.zhbdz20p-rtdi01.bluewin.ch
 lo51u.zhbdz20p-rtdi02.bluewin.ch
 loghost.bluewin.ch
 login-staging.bluewin.ch
@@ -2235,6 +2283,7 @@ minerva.bluewin.ch
 mklimek.homepage.bluewin.ch
 mmichel.homepage.bluewin.ch
 mmpfdmzw01.bluewin.ch
+mmpfdmzw01m.bluewin.ch
 mob.bluewin.ch
 mobile.bluewin.ch
 mobile.sso.bluewin.ch
@@ -2395,6 +2444,7 @@ oltdz00p-gtms03.bluewin.ch
 oltdz00p-gtms04k.bluewin.ch
 oltdz00p-lbdi01.bluewin.ch
 oltdz00p-lbdi02.bluewin.ch
+oltdz00p-lbmwp2.bluewin.ch
 oltdz00p-lbwmp1.bluewin.ch
 oltdz00p-rtaq01.bluewin.ch
 oltdz00p-rtdi02a.bluewin.ch
@@ -2427,6 +2477,7 @@ oltdzmms-pp1004k.bluewin.ch
 oltdzmms-pp1005.bluewin.ch
 oltdzmms-pp1005k.bluewin.ch
 oltdzmms-pp1006k.bluewin.ch
+oltdzmms-pp1022.bluewin.ch
 oltdzmms-pp1022k.bluewin.ch
 oltdzmms-pp1023k.bluewin.ch
 oltdzmms-pp1024.bluewin.ch
@@ -2445,6 +2496,7 @@ oltdzmop-cns013.bluewin.ch
 oltdzmop-cns013k.bluewin.ch
 oltdzmop-cns015.bluewin.ch
 oltdzmop-cns021.bluewin.ch
+oltdzmop-cns021k.bluewin.ch
 oltdzmop-cns023.bluewin.ch
 oltdzmop-cns023k.bluewin.ch
 oltdzmop-cns025.bluewin.ch
@@ -2465,6 +2517,7 @@ oltdzmop-miomta.bluewin.ch
 oltdzmop-miomta01.bluewin.ch
 oltdzmop-miomta01k.bluewin.ch
 oltdzmop-miomta02.bluewin.ch
+oltdzmop-mprox01o.bluewin.ch
 oltdzmop-odm01ps.bluewin.ch
 oltdzmop-odm01psm.bluewin.ch
 oltdzmop-odm02ps.bluewin.ch
@@ -2537,6 +2590,7 @@ oltdzmwp-mtsn15.bluewin.ch
 oltdzmwp-mtsn16.bluewin.ch
 oltdzmwp-mtsn16k.bluewin.ch
 oltdzmwp-mtsn17.bluewin.ch
+oltdzmwp-mtsn17k.bluewin.ch
 oltdzmwp-mtsn18.bluewin.ch
 oltdzmwp-mtsn18k.bluewin.ch
 oltdzmwp-mtsn19.bluewin.ch
@@ -2566,6 +2620,7 @@ oltdzmwp-wtsn01.bluewin.ch
 oltdzmwp-wtsn01k.bluewin.ch
 oltdzmwp-wtsn02.bluewin.ch
 oltdzmwp-wtsn02k.bluewin.ch
+oltdzmwp-wtsn03.bluewin.ch
 oltdzmwp-wtsn04.bluewin.ch
 oltdzmwp-wtsn05.bluewin.ch
 oltdzmwp-wtsn08.bluewin.ch
@@ -2595,6 +2650,7 @@ oltdzmwp-wtsn27.bluewin.ch
 oltdzmwp-wtsn29k.bluewin.ch
 oltdzmwp-wtsn30.bluewin.ch
 oltdzmwp-wtsn31.bluewin.ch
+oltdzmwp-wtsn32k.bluewin.ch
 oltdzmwp-wtsn33.bluewin.ch
 oltdzmwp-wtsn33k.bluewin.ch
 oltdzmwp-wtsn34.bluewin.ch
@@ -2623,6 +2679,7 @@ oltdzmwp-wtsn47k.bluewin.ch
 oltdzmwp-wtsn48.bluewin.ch
 oltdzmwp-wtsn48k.bluewin.ch
 oltdzmwp-wtsn49.bluewin.ch
+oltdzmwp-wtsn49k.bluewin.ch
 oltdzmwp-wtsn50.bluewin.ch
 oltdzmwp-wtsn51.bluewin.ch
 oltdzmwp-wtsn52.bluewin.ch
@@ -2636,6 +2693,7 @@ oltdzmwp-wtsn56k.bluewin.ch
 oltdzmwp-wtsn57.bluewin.ch
 oltdzmwp-wtsn57k.bluewin.ch
 oltdzmwp-wtsn58.bluewin.ch
+oltdzmwp-wtsn58k.bluewin.ch
 oltdzmwp-wtsn59.bluewin.ch
 oltdzmwp-wtsn59k.bluewin.ch
 oltdzmwp-wtsn60.bluewin.ch
@@ -2676,6 +2734,7 @@ oltdzmws-ppsn06k.bluewin.ch
 oltdzmws-ppsn07k.bluewin.ch
 oltdzmws-ppsn08.bluewin.ch
 oltdzmws-ppsn08k.bluewin.ch
+oltdzmws-ppsn09.bluewin.ch
 oltdzmws-ppsn09k.bluewin.ch
 oltdzmws-ppsn10k.bluewin.ch
 oltdzmws-ppsn11.bluewin.ch
@@ -2698,6 +2757,7 @@ oltdzpsp-adns05.bluewin.ch
 oltdzpsp-adsv01.bluewin.ch
 oltdzpsp-adsv01k.bluewin.ch
 oltdzpsp-adsv02.bluewin.ch
+oltdzpsp-adsv02k.bluewin.ch
 oltdzpsp-adsv03.bluewin.ch
 oltdzpsp-adsv04k.bluewin.ch
 oltdzpsp-besc01k.bluewin.ch
@@ -2718,6 +2778,7 @@ oltdzpsp-cns017.bluewin.ch
 oltdzpsp-cns017k.bluewin.ch
 oltdzpsp-cnsv02.bluewin.ch
 oltdzpsp-cnsv02k.bluewin.ch
+oltdzpsp-eacp01k.bluewin.ch
 oltdzpsp-eacp02k.bluewin.ch
 oltdzpsp-hndf01.bluewin.ch
 oltdzpsp-hndf01k.bluewin.ch
@@ -2787,6 +2848,7 @@ oltdzssp-idns17.bluewin.ch
 oltdzssp-idns18.bluewin.ch
 oltdzssp-idns18k.bluewin.ch
 oltdzssp-idnsv1.bluewin.ch
+oltdzssp-mock04.bluewin.ch
 oltdzssp-mock04k.bluewin.ch
 oltdzssp-ntp01.bluewin.ch
 oltdzssp-ntpv01.bluewin.ch
@@ -2900,6 +2962,7 @@ portal.bluewin.ch
 portal.test.bluewin.ch
 portal9.lb.bluewin.ch
 postmaster.bluewin.ch
+pp.bluewin.ch
 pres.sso.bluewin.ch
 presa.sso.bluewin.ch
 preszhb.bluewin.ch
@@ -2948,6 +3011,7 @@ qaapiu.login-test.bluewin.ch
 qlvsjaguar.homepage.bluewin.ch
 qlvsjaguarm.homepage.bluewin.ch
 quar-static.lb.bluewin.ch
+quini.lb.bluewin.ch
 r.bluewin.ch
 r.cns1.bluewin.ch
 racine.homepage.bluewin.ch
@@ -3047,6 +3111,8 @@ s-ps4zhh.bluewin.ch
 s-ps5zhb.bluewin.ch
 s-ps6zhh.bluewin.ch
 s.bluewin.ch
+s1101.tzhbdz21t-lb0001.bluewin.ch
+s1101.tzhhdz00p-lb0004.bluewin.ch
 s1101.tzhhdz00t-lb0001.bluewin.ch
 s1101.tzhhdz00t-lb0002.bluewin.ch
 s1101m.tzhbdz21t-lb0002.bluewin.ch
@@ -3099,6 +3165,7 @@ s1474.tzhhdz02p-lb0004.bluewin.ch
 s1474y.toltdz02p-lb0003.bluewin.ch
 s1474y.tzhhdz02p-lb0003.bluewin.ch
 s1474y.tzhhdz02p-lb0004.bluewin.ch
+s1475.toltdz02p-lb0003.bluewin.ch
 s1475.tzhhdz02p-lb0003.bluewin.ch
 s1475y.toltdz02p-lb0003.bluewin.ch
 s1475y.toltdz02p-lb0004.bluewin.ch
@@ -3137,6 +3204,7 @@ s1489y.toltdz00p-lb0003.bluewin.ch
 s1490.toltdz00p-lb0003.bluewin.ch
 s1490.toltdz00p-lb0004.bluewin.ch
 s1490y.toltdz00p-lb0003.bluewin.ch
+s1490y.toltdz00p-lb0004.bluewin.ch
 s1492.tzhbdz20p-lb0001.bluewin.ch
 s1492.tzhbdz20p-lb0002.bluewin.ch
 s1492.tzhhdz00p-lb0003.bluewin.ch
@@ -3473,6 +3541,7 @@ staging.tvair.sso.bluewin.ch
 stan-george.homepage.bluewin.ch
 static.myworld.bluewin.ch
 static251a.banzpss-xsgz02.bluewin.ch
+static89u.banetele-cust.czhbdz20p-lb0002.bluewin.ch
 statich14.bluewin.ch
 stavimdzbop-bouc149.bluewin.ch
 stoeckli.homepage.bluewin.ch
@@ -3573,6 +3642,7 @@ tge1-4.zhbia11p-rtdi01.bluewin.ch
 tge1-4.zhbia11p-rtdi02.bluewin.ch
 tge1-4.zhhia01p-rtdi01.bluewin.ch
 tge1-4.zhhia01p-rtdi02.bluewin.ch
+tge1-4y.zhbia11p-rtdi02.bluewin.ch
 tge2-4.zhbia11p-rtdi01.bluewin.ch
 tge2-4.zhbia11p-rtdi02.bluewin.ch
 tge2-4.zhhia01p-rtdi01.bluewin.ch
@@ -3581,6 +3651,7 @@ tge2-4y.zhbia11p-rtdi01.bluewin.ch
 tge2-4y.zhbia11p-rtdi02.bluewin.ch
 tge3-2.zhbdz09p-rtdi01.bluewin.ch
 tge3-2.zhbdz09p-rtdi02.bluewin.ch
+tge3-2y.zhbdz09p-rtdi01.bluewin.ch
 tge3-2y.zhbdz09p-rtdi02.bluewin.ch
 tge4-4.zhbia11p-rtdi01.bluewin.ch
 tge4-4.zhbia11p-rtdi02.bluewin.ch
@@ -3644,6 +3715,7 @@ ttcp-olt-cp1-rttc02.bluewin.ch
 tu104w.zhbic20p-ipn001.bluewin.ch
 tu104w.zhbic20p-ipn002.bluewin.ch
 tv.bluewin.ch
+tvair.bluewin.ch
 tvair.sso.bluewin.ch
 tvairo.sso.bluewin.ch
 tvp1201olt.bluewin.ch
@@ -3712,6 +3784,8 @@ tvp1226zhha.bluewin.ch
 tvp1227olt.bluewin.ch
 tvp1227zhb.bluewin.ch
 tvp1227zhba.bluewin.ch
+tvp1227zhh.bluewin.ch
+tvp1228olt.bluewin.ch
 tvp1228zhb.bluewin.ch
 tvp1228zhba.bluewin.ch
 tvp1228zhha.bluewin.ch
@@ -3723,6 +3797,7 @@ tvp1231zhha.bluewin.ch
 tvp1232zhba.bluewin.ch
 tvp1233olt.bluewin.ch
 tvp1233zhb.bluewin.ch
+tvp1233zhba.bluewin.ch
 tvp1234olt.bluewin.ch
 tvp1234zhba.bluewin.ch
 tvp1235olta.bluewin.ch
@@ -3743,6 +3818,7 @@ tvp1239olt.bluewin.ch
 tvp1239olta.bluewin.ch
 tvp1239zhb.bluewin.ch
 tvp1239zhh.bluewin.ch
+tvp1239zhha.bluewin.ch
 tvp1240olt.bluewin.ch
 tvp1240olta.bluewin.ch
 tvp1240zhb.bluewin.ch
@@ -3764,6 +3840,7 @@ tvp1244zhha.bluewin.ch
 tvp1245olt.bluewin.ch
 tvp1246olta.bluewin.ch
 tvp1246zhb.bluewin.ch
+tvp1246zhh.bluewin.ch
 tvp1246zhha.bluewin.ch
 tvp1247olt.bluewin.ch
 tvp1247olta.bluewin.ch
@@ -3779,7 +3856,9 @@ tvp1249zhha.bluewin.ch
 tvp1250olta.bluewin.ch
 tvp1250zhb.bluewin.ch
 tvp1250zhh.bluewin.ch
+tvp1250zhha.bluewin.ch
 tvp1251olt.bluewin.ch
+tvp1251zhh.bluewin.ch
 tvp1251zhha.bluewin.ch
 tvp1252olt.bluewin.ch
 tvp1252olta.bluewin.ch
@@ -3792,6 +3871,7 @@ tvp1254zhb.bluewin.ch
 tvp1254zhha.bluewin.ch
 tvp1255olt.bluewin.ch
 tvp1255olta.bluewin.ch
+tvp1255zhha.bluewin.ch
 tvp1256olt.bluewin.ch
 tvp1256olta.bluewin.ch
 tvp1256zhb.bluewin.ch
@@ -3811,6 +3891,7 @@ tvp1259zhb.bluewin.ch
 tvp1259zhba.bluewin.ch
 tvp1259zhha.bluewin.ch
 tvp1260olt.bluewin.ch
+tvp1260zhb.bluewin.ch
 tvp1260zhba.bluewin.ch
 tvp1260zhha.bluewin.ch
 tvp1261zhb.bluewin.ch
@@ -3832,6 +3913,7 @@ tvp1266olt.bluewin.ch
 tvp1266zhha.bluewin.ch
 tvp1267olta.bluewin.ch
 tvp1267zhba.bluewin.ch
+tvp1267zhh.bluewin.ch
 tvp1267zhha.bluewin.ch
 tvp1268zhb.bluewin.ch
 tvp1268zhh.bluewin.ch
@@ -3944,6 +4026,7 @@ tvp1306zhb.bluewin.ch
 tvp1306zhba.bluewin.ch
 tvp1306zhh.bluewin.ch
 tvp1306zhha.bluewin.ch
+tvp1307zhba.bluewin.ch
 tvp1307zhh.bluewin.ch
 tvp1307zhha.bluewin.ch
 tvp1308zhb.bluewin.ch
@@ -3982,6 +4065,7 @@ tvp1323zhh.bluewin.ch
 tvp1323zhha.bluewin.ch
 tvp1324zhh.bluewin.ch
 tvp1325zhb.bluewin.ch
+tvp1325zhh.bluewin.ch
 tvp1325zhha.bluewin.ch
 tvp1326zhba.bluewin.ch
 tvp1327zhba.bluewin.ch
@@ -3992,6 +4076,7 @@ tvp1329zhba.bluewin.ch
 tvp1329zhha.bluewin.ch
 tvp1330zhba.bluewin.ch
 tvp1330zhh.bluewin.ch
+tvp1331zhha.bluewin.ch
 tvp1332zhh.bluewin.ch
 tvp1332zhha.bluewin.ch
 tvp1333zhba.bluewin.ch
@@ -4017,6 +4102,7 @@ tvp1340zhh.bluewin.ch
 tvp1341zhb.bluewin.ch
 tvp1341zhba.bluewin.ch
 tvp1341zhh.bluewin.ch
+tvp1341zhha.bluewin.ch
 tvp1342zhb.bluewin.ch
 tvp1342zhh.bluewin.ch
 tvp1342zhha.bluewin.ch
@@ -4034,13 +4120,16 @@ tvp1349zhb.bluewin.ch
 tvp1349zhba.bluewin.ch
 tvp1349zhh.bluewin.ch
 tvp1350zhb.bluewin.ch
+tvp1350zhha.bluewin.ch
 tvp1351zhba.bluewin.ch
 tvp1351zhh.bluewin.ch
 tvp1352zhb.bluewin.ch
 tvp1352zhba.bluewin.ch
 tvp1352zhh.bluewin.ch
+tvp1352zhha.bluewin.ch
 tvp1353zhb.bluewin.ch
 tvp1353zhba.bluewin.ch
+tvp1353zhha.bluewin.ch
 tvp1354zhb.bluewin.ch
 tvp1354zhba.bluewin.ch
 tvp1354zhh.bluewin.ch
@@ -4103,6 +4192,8 @@ tvp1378zhha.bluewin.ch
 tvp1379zhb.bluewin.ch
 tvp1380zhb.bluewin.ch
 tvp1380zhba.bluewin.ch
+tvp1380zhha.bluewin.ch
+tvp1381zhh.bluewin.ch
 tvp1382zhb.bluewin.ch
 tvp1382zhh.bluewin.ch
 tvp1382zhha.bluewin.ch
@@ -4117,6 +4208,7 @@ tvp1386zhb.bluewin.ch
 tvp1386zhba.bluewin.ch
 tvp1386zhha.bluewin.ch
 tvp1388zhb.bluewin.ch
+tvp1388zhba.bluewin.ch
 tvp1388zhha.bluewin.ch
 tvp1389zhha.bluewin.ch
 tvp1390zhba.bluewin.ch
@@ -4217,6 +4309,7 @@ tvp1439zhb.bluewin.ch
 tvp1439zhha.bluewin.ch
 tvp1440zhba.bluewin.ch
 tvp1440zhh.bluewin.ch
+tvp1440zhha.bluewin.ch
 tvp1441zhba.bluewin.ch
 tvp1441zhh.bluewin.ch
 tvp1442zhb.bluewin.ch
@@ -4232,6 +4325,7 @@ tvp1451zhba.bluewin.ch
 tvp1452zhh.bluewin.ch
 tvp1453zhb.bluewin.ch
 tvp1453zhba.bluewin.ch
+tvp1454zhba.bluewin.ch
 tvp1455zhha.bluewin.ch
 tvp1456zhh.bluewin.ch
 tvp1456zhha.bluewin.ch
@@ -4240,6 +4334,7 @@ tvp1457zhha.bluewin.ch
 tvp1458zhh.bluewin.ch
 tvp1459zhba.bluewin.ch
 tvp1459zhh.bluewin.ch
+tvp1459zhha.bluewin.ch
 tvp1460zhba.bluewin.ch
 tvp1460zhh.bluewin.ch
 tvp1460zhha.bluewin.ch
@@ -4269,6 +4364,7 @@ tvp1470zhba.bluewin.ch
 tvp1470zhh.bluewin.ch
 tvp1471zhb.bluewin.ch
 tvp1471zhh.bluewin.ch
+tvp1471zhha.bluewin.ch
 tvp1472zhh.bluewin.ch
 tvp1473zhh.bluewin.ch
 tvp1474zhb.bluewin.ch
@@ -4304,9 +4400,11 @@ tvp1487zhba.bluewin.ch
 tvp1488zhb.bluewin.ch
 tvp1488zhba.bluewin.ch
 tvp1489zhb.bluewin.ch
+tvp1489zhba.bluewin.ch
 tvp1489zhh.bluewin.ch
 tvp1489zhha.bluewin.ch
 tvp1490zhb.bluewin.ch
+tvp1490zhba.bluewin.ch
 tvp1490zhh.bluewin.ch
 tvp1490zhha.bluewin.ch
 tvp1491zhb.bluewin.ch
@@ -4315,6 +4413,7 @@ tvp1491zhh.bluewin.ch
 tvp1491zhha.bluewin.ch
 tvp1492zhba.bluewin.ch
 tvp1495zhb.bluewin.ch
+tvp1495zhba.bluewin.ch
 tvp1496zhb.bluewin.ch
 tvp1496zhba.bluewin.ch
 tvp1496zhha.bluewin.ch
@@ -4353,15 +4452,18 @@ tvp1513zhh.bluewin.ch
 tvp1514zhb.bluewin.ch
 tvp1514zhba.bluewin.ch
 tvp1514zhh.bluewin.ch
+tvp1514zhha.bluewin.ch
 tvp1516zhb.bluewin.ch
 tvp1516zhh.bluewin.ch
 tvp1516zhha.bluewin.ch
 tvp1517zhb.bluewin.ch
+tvp1517zhha.bluewin.ch
 tvp1518zhb.bluewin.ch
 tvp1518zhba.bluewin.ch
 tvp1518zhh.bluewin.ch
 tvp1519zhb.bluewin.ch
 tvp1519zhba.bluewin.ch
+tvp1519zhh.bluewin.ch
 tvp1520zhb.bluewin.ch
 tvp1520zhba.bluewin.ch
 tvp1520zhh.bluewin.ch
@@ -4369,6 +4471,7 @@ tvp1520zhha.bluewin.ch
 tvp1521zhh.bluewin.ch
 tvp1521zhha.bluewin.ch
 tvp1522zhh.bluewin.ch
+tvp1522zhha.bluewin.ch
 tvp1523zhba.bluewin.ch
 tvp1524zhb.bluewin.ch
 tvp1524zhba.bluewin.ch
@@ -4379,6 +4482,7 @@ tvp1525zhh.bluewin.ch
 tvp1525zhha.bluewin.ch
 tvp1530zhha.bluewin.ch
 tvp1531zhb.bluewin.ch
+tvp1531zhba.bluewin.ch
 tvp1551zhb.bluewin.ch
 tvp1551zhh.bluewin.ch
 tvp1552zhb.bluewin.ch
@@ -4427,6 +4531,7 @@ tvp1571zhh.bluewin.ch
 tvp1571zhha.bluewin.ch
 tvp1572zhb.bluewin.ch
 tvp1572zhh.bluewin.ch
+tvp1572zhha.bluewin.ch
 tvp1574zhb.bluewin.ch
 tvp1574zhba.bluewin.ch
 tvp1574zhh.bluewin.ch
@@ -4439,6 +4544,7 @@ tvp1576zhha.bluewin.ch
 tvp1577zhha.bluewin.ch
 tvp1578zhba.bluewin.ch
 tvp1578zhh.bluewin.ch
+tvp1578zhha.bluewin.ch
 tvp1579zhb.bluewin.ch
 tvp1579zhh.bluewin.ch
 tvp1580zhb.bluewin.ch
@@ -4450,11 +4556,13 @@ tvp1583zhba.bluewin.ch
 tvp1583zhh.bluewin.ch
 tvp1583zhha.bluewin.ch
 tvp1584zhb.bluewin.ch
+tvp1584zhba.bluewin.ch
 tvp1584zhh.bluewin.ch
 tvp1585zhb.bluewin.ch
 tvp1585zhba.bluewin.ch
 tvp1585zhh.bluewin.ch
 tvp1585zhha.bluewin.ch
+tvp1586zhha.bluewin.ch
 tvp1587zhba.bluewin.ch
 tvp1587zhha.bluewin.ch
 tvp1588zhb.bluewin.ch
@@ -4556,6 +4664,7 @@ tvs1223olta.bluewin.ch
 tvs1224olta.bluewin.ch
 tvs1224zhh.bluewin.ch
 tvs1225zhb.bluewin.ch
+tvs1225zhba.bluewin.ch
 tvs1225zhh.bluewin.ch
 tvs1225zhha.bluewin.ch
 tvs1226zhh.bluewin.ch
@@ -4572,6 +4681,7 @@ tvs1230zhb.bluewin.ch
 tvs1231zhb.bluewin.ch
 tvs1232zhb.bluewin.ch
 tvs1232zhh.bluewin.ch
+tvs1232zhha.bluewin.ch
 tvs1233zhha.bluewin.ch
 tvs1234zhh.bluewin.ch
 tvs1234zhha.bluewin.ch
@@ -4615,6 +4725,7 @@ tzhhdz00p-lb0003.bluewin.ch
 tzhhdz00p-lb0004.bluewin.ch
 tzhhdz00p-lb0004y.bluewin.ch
 tzhhdz00t-lb0001y.bluewin.ch
+tzhhdz00t-lb0002.bluewin.ch
 tzhhdz00t-lb000xy.bluewin.ch
 tzhhdz02p-lb00.bluewin.ch
 tzhhdz02p-lb0003.bluewin.ch
@@ -4695,6 +4806,7 @@ vimdzcyp-dnsaf2k.bluewin.ch
 vimdzcyp-jump01.bluewin.ch
 vimdzcyp-jump01k.bluewin.ch
 vimdzcyp-jump02.bluewin.ch
+vimdzcyp-jump02k.bluewin.ch
 vimdzcyp-sbx001.bluewin.ch
 vimdzcyp-sbx001k.bluewin.ch
 vimdzcyp-sbx002.bluewin.ch
@@ -4748,6 +4860,7 @@ vimdzget-boha11.bluewin.ch
 vimdzget-boha11k.bluewin.ch
 vimdzget-boma10.bluewin.ch
 vimdzget-boso10.bluewin.ch
+vimdzget-boso11.bluewin.ch
 vimdzget-bouc10.bluewin.ch
 vimdzget-bouc10k.bluewin.ch
 vimdzget-cns001.bluewin.ch
@@ -4802,6 +4915,7 @@ vimdzget-emvz7ik.bluewin.ch
 vimdzget-emvz7t.bluewin.ch
 vimdzget-emvz8t.bluewin.ch
 vimdzget-emvz9i.bluewin.ch
+vimdzget-emvz9ik.bluewin.ch
 vimdzget-fep001.bluewin.ch
 vimdzget-fep002k.bluewin.ch
 vimdzget-gui001.bluewin.ch
@@ -4859,14 +4973,18 @@ vimdzget-ping02.bluewin.ch
 vimdzget-prox01.bluewin.ch
 vimdzget-prxz1d.bluewin.ch
 vimdzget-prxz1dk.bluewin.ch
+vimdzget-ptds01.bluewin.ch
 vimdzget-ptds01k.bluewin.ch
 vimdzget-ptds02.bluewin.ch
 vimdzget-pwew01.bluewin.ch
 vimdzget-pwew01k.bluewin.ch
+vimdzget-pwrc01.bluewin.ch
 vimdzget-pwrc01k.bluewin.ch
+vimdzget-radf01.bluewin.ch
 vimdzget-radf01k.bluewin.ch
 vimdzget-radf51.bluewin.ch
 vimdzget-radf52.bluewin.ch
+vimdzget-radf52k.bluewin.ch
 vimdzget-radf54.bluewin.ch
 vimdzget-radf54k.bluewin.ch
 vimdzget-rich01k.bluewin.ch
@@ -4886,6 +5004,7 @@ vimdzget-um1012k.bluewin.ch
 vimdzget-um1021.bluewin.ch
 vimdzget-um1021k.bluewin.ch
 vimdzget-um1022.bluewin.ch
+vimdzget-um1022k.bluewin.ch
 vimdzget-us0011.bluewin.ch
 vimdzget-us1011.bluewin.ch
 vimdzget-us1011k.bluewin.ch
@@ -4949,6 +5068,7 @@ vimdzget-xsgn02.bluewin.ch
 vimdzget-xsgn02k.bluewin.ch
 vimdzgey-um0011.bluewin.ch
 vimdzgey-um0012k.bluewin.ch
+vimdzgey-um1011.bluewin.ch
 vimdzgey-um1012k.bluewin.ch
 vimdzgey-um1021.bluewin.ch
 vimdzgey-um1021k.bluewin.ch
@@ -4963,6 +5083,7 @@ vimdzgey-xb0011k.bluewin.ch
 vimdzgey-xb1011k.bluewin.ch
 vimdzgey-xb1012k.bluewin.ch
 vimdzgey-xd1011.bluewin.ch
+vimdzgey-xd1011k.bluewin.ch
 vimdzgey-xp0011.bluewin.ch
 vimdzgey-xp1011.bluewin.ch
 vimdzgey-xp1011k.bluewin.ch
@@ -5043,11 +5164,13 @@ vimdzhep-xp3011.bluewin.ch
 vimdzhep-xp3012-upds.bluewin.ch
 vimdzhep-xp3012.bluewin.ch
 vimdzhmp-dcws01.bluewin.ch
+vimdzhmp-dcws02.bluewin.ch
 vimdzhmp-dcws02k.bluewin.ch
 vimdzhmp-hmpdl2k.bluewin.ch
 vimdzhmp-hmpws1.bluewin.ch
 vimdzhmp-hmpws1k.bluewin.ch
 vimdzhmp-hmpws2.bluewin.ch
+vimdzhmp-hmpws3.bluewin.ch
 vimdzhms-hmsws1k.bluewin.ch
 vimdzmop-cdws01.bluewin.ch
 vimdzmop-cdws01k.bluewin.ch
@@ -5187,9 +5310,11 @@ vimdzmsp-imap12-tmp.bluewin.ch
 vimdzmsp-imap12-tmpk.bluewin.ch
 vimdzmsp-imap12.bluewin.ch
 vimdzmsp-imap13-tmp.bluewin.ch
+vimdzmsp-imap13-tmpk.bluewin.ch
 vimdzmsp-imap13.bluewin.ch
 vimdzmsp-imap13s.bluewin.ch
 vimdzmsp-imap14-tmp.bluewin.ch
+vimdzmsp-imap14-tmpk.bluewin.ch
 vimdzmsp-imap14.bluewin.ch
 vimdzmsp-imap15-tmp.bluewin.ch
 vimdzmsp-imap15-tmpk.bluewin.ch
@@ -5305,6 +5430,7 @@ vimdzmsp-mpre06k.bluewin.ch
 vimdzmsp-mpre07.bluewin.ch
 vimdzmsp-mpre08.bluewin.ch
 vimdzmsp-mpre09.bluewin.ch
+vimdzmsp-mpre09k.bluewin.ch
 vimdzmsp-mpre10.bluewin.ch
 vimdzmsp-mpre12.bluewin.ch
 vimdzmsp-mpre12k.bluewin.ch
@@ -5321,6 +5447,7 @@ vimdzmsp-mpre92k.bluewin.ch
 vimdzmsp-mrel01-tmp.bluewin.ch
 vimdzmsp-mrel01.bluewin.ch
 vimdzmsp-mrel02-tmp.bluewin.ch
+vimdzmsp-mrel02-tmpk.bluewin.ch
 vimdzmsp-mrel02.bluewin.ch
 vimdzmsp-mxin01-tmp.bluewin.ch
 vimdzmsp-mxin01-tmpk.bluewin.ch
@@ -5329,6 +5456,7 @@ vimdzmsp-mxin01s.bluewin.ch
 vimdzmsp-mxin02-tmp.bluewin.ch
 vimdzmsp-mxin02-tmpk.bluewin.ch
 vimdzmsp-mxin02.bluewin.ch
+vimdzmsp-mxin02s.bluewin.ch
 vimdzmsp-mxin03-tmp.bluewin.ch
 vimdzmsp-mxin03.bluewin.ch
 vimdzmsp-mxin03s.bluewin.ch
@@ -5487,6 +5615,7 @@ vimdzmsp-rich02-tmp.bluewin.ch
 vimdzmsp-rich02.bluewin.ch
 vimdzmsp-rich02s.bluewin.ch
 vimdzmsp-rich03-tmp.bluewin.ch
+vimdzmsp-rich03-tmpk.bluewin.ch
 vimdzmsp-rich03.bluewin.ch
 vimdzmsp-rich04-tmp.bluewin.ch
 vimdzmsp-rich04.bluewin.ch
@@ -5533,6 +5662,7 @@ vimdzmsp-rich16.bluewin.ch
 vimdzmsp-rich17-tmp.bluewin.ch
 vimdzmsp-rich17.bluewin.ch
 vimdzmsp-rich18-tmp.bluewin.ch
+vimdzmsp-rich18-tmpk.bluewin.ch
 vimdzmsp-rich18.bluewin.ch
 vimdzmsp-rich18s.bluewin.ch
 vimdzmsp-rich19-tmp.bluewin.ch
@@ -5680,6 +5810,7 @@ vimdzpas-stms02.bluewin.ch
 vimdzpas-stts01.bluewin.ch
 vimdzpas-stts01k.bluewin.ch
 vimdzpas-stts02.bluewin.ch
+vimdzpas-stts02k.bluewin.ch
 vimdzpsp-adfo01.bluewin.ch
 vimdzpsp-adfo02.bluewin.ch
 vimdzpsp-adfo03.bluewin.ch
@@ -5718,6 +5849,7 @@ vimdzpsp-cnst01.bluewin.ch
 vimdzpsp-cnst03.bluewin.ch
 vimdzpsp-cnst03k.bluewin.ch
 vimdzpsp-cpdo02.bluewin.ch
+vimdzpsp-cpdz01k.bluewin.ch
 vimdzpsp-cpdz02.bluewin.ch
 vimdzpsp-datr11.bluewin.ch
 vimdzpsp-datr11k.bluewin.ch
@@ -5757,9 +5889,11 @@ vimdzpsp-mcr001k.bluewin.ch
 vimdzpsp-misc01.bluewin.ch
 vimdzpsp-misc02.bluewin.ch
 vimdzpsp-netv01.bluewin.ch
+vimdzpsp-netv01k.bluewin.ch
 vimdzpsp-ntp01.bluewin.ch
 vimdzpsp-ntp02.bluewin.ch
 vimdzpsp-nvro01.bluewin.ch
+vimdzpsp-nvro01i.bluewin.ch
 vimdzpsp-nvro02.bluewin.ch
 vimdzpsp-nvro11.bluewin.ch
 vimdzpsp-nvro11k.bluewin.ch
@@ -5769,6 +5903,7 @@ vimdzpsp-nvrz01k.bluewin.ch
 vimdzpsp-nvrz02.bluewin.ch
 vimdzpsp-nvrz11.bluewin.ch
 vimdzpsp-nvrz12.bluewin.ch
+vimdzpsp-nvrz12k.bluewin.ch
 vimdzpsp-nvso01.bluewin.ch
 vimdzpsp-nvso02.bluewin.ch
 vimdzpsp-nvso11.bluewin.ch
@@ -5809,6 +5944,7 @@ vimdzpsp-samw03.bluewin.ch
 vimdzpsp-samw03k.bluewin.ch
 vimdzpsp-samw04.bluewin.ch
 vimdzpsp-samw04k.bluewin.ch
+vimdzpsp-samw22.bluewin.ch
 vimdzpsp-samw22k.bluewin.ch
 vimdzpsp-sbx001.bluewin.ch
 vimdzpsp-sbx002k.bluewin.ch
@@ -5835,6 +5971,7 @@ vimdzpsp-xsgo02.bluewin.ch
 vimdzpsp-xsgo02k.bluewin.ch
 vimdzpsp-xsgo03.bluewin.ch
 vimdzpsp-xsgo04.bluewin.ch
+vimdzpsp-xsgo04k.bluewin.ch
 vimdzpsp-xsgz01.bluewin.ch
 vimdzpsp-xsgz01k.bluewin.ch
 vimdzpsp-xsgz02.bluewin.ch
@@ -5857,6 +5994,7 @@ vimdzpss-apnp01k.bluewin.ch
 vimdzpss-apnp02.bluewin.ch
 vimdzpss-besc01.bluewin.ch
 vimdzpss-besc01k.bluewin.ch
+vimdzpss-bess01k.bluewin.ch
 vimdzpss-bess02.bluewin.ch
 vimdzpss-bess02k.bluewin.ch
 vimdzpss-boha11.bluewin.ch
@@ -5874,6 +6012,7 @@ vimdzpss-cpdz1sk.bluewin.ch
 vimdzpss-cpdz2sk.bluewin.ch
 vimdzpss-emvo01.bluewin.ch
 vimdzpss-emvo02.bluewin.ch
+vimdzpss-emvo02k.bluewin.ch
 vimdzpss-emvz01.bluewin.ch
 vimdzpss-emvz01k.bluewin.ch
 vimdzpss-emvz02.bluewin.ch
@@ -5913,6 +6052,7 @@ vimdzpss-nvsz11k.bluewin.ch
 vimdzpss-nvsz12.bluewin.ch
 vimdzpss-nvsz12k.bluewin.ch
 vimdzpss-omso01.bluewin.ch
+vimdzpss-omso01k.bluewin.ch
 vimdzpss-omsz01.bluewin.ch
 vimdzpss-polm20k.bluewin.ch
 vimdzpss-prox01.bluewin.ch
@@ -5949,10 +6089,12 @@ vimdzpss-xs6115-temp.bluewin.ch
 vimdzpss-xs6115-tempk.bluewin.ch
 vimdzpss-xs6115.bluewin.ch
 vimdzpss-xs6116-temp.bluewin.ch
+vimdzpss-xs6116-tempk.bluewin.ch
 vimdzpss-xs6116.bluewin.ch
 vimdzpss-xs6116u.bluewin.ch
 vimdzpss-xsgn02.bluewin.ch
 vimdzpss-xsgo01.bluewin.ch
+vimdzpss-xsgo01k.bluewin.ch
 vimdzpss-xsgo02.bluewin.ch
 vimdzpss-xsgo02k.bluewin.ch
 vimdzpss-xsgo03.bluewin.ch
@@ -5968,8 +6110,10 @@ vimdzpss-xsgz04.bluewin.ch
 vimdzpwp-dhcs02k.bluewin.ch
 vimdzpwp-pwrc01k.bluewin.ch
 vimdzpwp-radc01k.bluewin.ch
+vimdzpws-dhcs02k.bluewin.ch
 vimdzpws-pwrc01k.bluewin.ch
 vimdzpws-pwrc02.bluewin.ch
+vimdzpws-pwrc02k.bluewin.ch
 vimdzss.bluewin.ch
 vimdzssp-almg01.bluewin.ch
 vimdzssp-almg02k.bluewin.ch
@@ -6044,6 +6188,7 @@ vimdzsst-i2cd04.bluewin.ch
 vimdzsst-mock02.bluewin.ch
 vimdzsst-mock04.bluewin.ch
 vimdzsst-mock04k.bluewin.ch
+vimdzsst-odst03k.bluewin.ch
 vimdzxxx-um3011.bluewin.ch
 vimdzxxx-um3011k.bluewin.ch
 vimdzxxx-um3012.bluewin.ch
@@ -6054,6 +6199,7 @@ vimdzxxx-um3022.bluewin.ch
 vimdzxxx-um3022k.bluewin.ch
 vimdzxxx-um3031.bluewin.ch
 vimdzxxx-um3032.bluewin.ch
+vimdzxxx-um3032k.bluewin.ch
 vimdzxxx-um3041.bluewin.ch
 vimdzxxx-um3041k.bluewin.ch
 vimdzxxx-um3042.bluewin.ch
@@ -6108,6 +6254,7 @@ vimezmsp-mfwd03k.bluewin.ch
 vimezmsp-mllp01.bluewin.ch
 vimezmsp-mrel01.bluewin.ch
 vimezmsp-mrel01k.bluewin.ch
+vimezmsp-mrel02.bluewin.ch
 vimezmsp-mrel02k.bluewin.ch
 vimezmsp-mxin02k.bluewin.ch
 vimezmsp-mxin04.bluewin.ch
@@ -6167,6 +6314,7 @@ vimezpss-emvz02.bluewin.ch
 vimezpss-emvz02k.bluewin.ch
 vimezssp-irel01.bluewin.ch
 vimezssp-irel02.bluewin.ch
+vimezssp-irel02k.bluewin.ch
 vin38-1-78-234-211-182k.fb05.bluewin.ch
 vinacafecafedenamphindpss-emvo01.bluewin.ch
 vinacafecafedenamphindpss-emvo01c.bluewin.ch
@@ -6238,6 +6386,7 @@ vip-2.zhhdzpsp-cns018.bluewin.ch
 vip-2g.zhhdzmop-cns002.bluewin.ch
 vip-2w.oltdzmop-cns003.bluewin.ch
 vip-2w.oltdzpsp-cns001.bluewin.ch
+vip-2w.oltdzpsp-cns003.bluewin.ch
 vip-2w.oltdzpsp-cns005.bluewin.ch
 vip-2w.oltdzpsp-cns015.bluewin.ch
 vip-2w.vimdzget-dnst02.bluewin.ch
@@ -6246,6 +6395,7 @@ vip-2w.zhbdzget-cns02t.bluewin.ch
 vip-2w.zhhdzmop-cns01s.bluewin.ch
 vip-2w.zhhdzpsp-cns004.bluewin.ch
 vip-2w.zhhdzpsp-cns006.bluewin.ch
+vip-2w.zhhdzpsp-cns010.bluewin.ch
 vip-3.olt-mop.bluewin.ch
 vip-3.olt-psp.bluewin.ch
 vip-3.stag-mop.bluewin.ch
@@ -6366,6 +6516,7 @@ www.homepage.bluewin.ch
 www.hpt.sso.bluewin.ch
 www.hsi.bluewin.ch
 www.hsidc.bluewin.ch
+www.hsif1.bluewin.ch
 www.i-dnsn-blocko-1.bluewin.ch
 www.imaps.lb.bluewin.ch
 www.imapstg.bluewin.ch
@@ -6398,6 +6549,7 @@ www.rest-sonne.homepage.bluewin.ch
 www.rich-v01.bluewin.ch
 www.rich.bluewin.ch
 www.richstg-v01.bluewin.ch
+www.richstg.bluewin.ch
 www.richstg.lb.bluewin.ch
 www.rms-int.bluewin.ch
 www.rms-test.bluewin.ch
@@ -6428,6 +6580,7 @@ www.textarchiv.homepage.bluewin.ch
 www.vimdzget-um0012.bluewin.ch
 www.vimdzget-um1012.bluewin.ch
 www.vimdzget-um1021.bluewin.ch
+www.vimdzget-um1022.bluewin.ch
 www.vimdzget-us1011.bluewin.ch
 www.vimdzget-xb0011.bluewin.ch
 www.vimdzget-xsgn00.bluewin.ch
@@ -6446,6 +6599,7 @@ www9.game.bluewin.ch
 www9.jass.bluewin.ch
 wwwa.cq.test.bluewin.ch
 wwwa.self-fruits.homepage.bluewin.ch
+wwwc.img.homepage.bluewin.ch
 wwwc.mgberg2.homepage.bluewin.ch
 wwwc.pedp.bluewin.ch
 wwwc.support.bluewin.ch
@@ -6498,6 +6652,7 @@ ystehleu.homepage.bluewin.ch
 zeithaus.homepage.bluewin.ch
 zeithausw.homepage.bluewin.ch
 zh.bluewin.ch
+zhb.bluewin.ch
 zhbapssp.bluewin.ch
 zhbdz01p-rtdi01.bluewin.ch
 zhbdz02p-rtdi01.bluewin.ch
@@ -6534,6 +6689,7 @@ zhbdzget-mife1t.bluewin.ch
 zhbdzget-nvrp1ik.bluewin.ch
 zhbdzget-nvrp1j.bluewin.ch
 zhbdzget-nvrp1jk.bluewin.ch
+zhbdzget-nvrp1t.bluewin.ch
 zhbdzget-nvrp1uk.bluewin.ch
 zhbdzget-nvrp1v.bluewin.ch
 zhbdzget-nvrp1vk.bluewin.ch
@@ -6586,12 +6742,14 @@ zhbdzget-radf51k.bluewin.ch
 zhbdzget-radf53.bluewin.ch
 zhbdzget-radf53k.bluewin.ch
 zhbdzget-radf54.bluewin.ch
+zhbdzget-radf54k.bluewin.ch
 zhbdzget-sctvst.bluewin.ch
 zhbdzget-ssof50k.bluewin.ch
 zhbdzget-ssof51.bluewin.ch
 zhbdzget-ssof52.bluewin.ch
 zhbdzget-ssof53.bluewin.ch
 zhbdzget-xsgn02.bluewin.ch
+zhbdzgss01.bluewin.ch
 zhbdzgss01k.bluewin.ch
 zhbdzgss02a.bluewin.ch
 zhbdzmsp-cns013.bluewin.ch
@@ -6621,6 +6779,7 @@ zhbdzmsp-mpre19.bluewin.ch
 zhbdzmsp-mpre19k.bluewin.ch
 zhbdzmsp-mpre21.bluewin.ch
 zhbdzmsp-mpre21k.bluewin.ch
+zhbdzmsp-mpre23.bluewin.ch
 zhbdzmsp-mpre25.bluewin.ch
 zhbdzmsp-mpre91.bluewin.ch
 zhbdzmsp-mpre91k.bluewin.ch
@@ -6678,6 +6837,7 @@ zhbdzmsp-rich43.bluewin.ch
 zhbdzmsp-rich45.bluewin.ch
 zhbdzmsp-rich45k.bluewin.ch
 zhbdzmsp-rich47.bluewin.ch
+zhbdzmsp-rich49k.bluewin.ch
 zhbdzmsp-rich51k.bluewin.ch
 zhbdzmsp-rich53.bluewin.ch
 zhbdzmsp-rich57.bluewin.ch
@@ -6719,6 +6879,7 @@ zhbdzpsp-hcin21.bluewin.ch
 zhbdzpsp-hcin23k.bluewin.ch
 zhbdzpsp-hrel11.bluewin.ch
 zhbdzpsp-hrel11k.bluewin.ch
+zhbdzpsp-hrel13.bluewin.ch
 zhbdzpsp-lbrls1.bluewin.ch
 zhbdzpsp-lbrlt1.bluewin.ch
 zhbdzpsp-lbrlt1k.bluewin.ch
@@ -6747,6 +6908,7 @@ zhbdzssp-almg11.bluewin.ch
 zhbdzssp-almg11k.bluewin.ch
 zhbdzssp-idns35.bluewin.ch
 zhbdzssp-idns35k.bluewin.ch
+zhbdzssp-idns36.bluewin.ch
 zhbdzssp-idns36k.bluewin.ch
 zhbdzssp-idns37.bluewin.ch
 zhbdzssp-idns37k.bluewin.ch
@@ -6783,6 +6945,7 @@ zhbdztvt-wh1029k.bluewin.ch
 zhbdztvt-wh1030.bluewin.ch
 zhbdztvt-wh1030k.bluewin.ch
 zhbdztvt-wh1031k.bluewin.ch
+zhbdztvt-wh1032k.bluewin.ch
 zhbdztvt-wh1033.bluewin.ch
 zhbdztvt-wh1033k.bluewin.ch
 zhbdztvt-wh1035.bluewin.ch
@@ -6905,6 +7068,7 @@ zhhdzhmp-hmsws1.bluewin.ch
 zhhdzmop-apds02k.bluewin.ch
 zhhdzmop-cns002w.bluewin.ch
 zhhdzmop-cns004.bluewin.ch
+zhhdzmop-cns004w.bluewin.ch
 zhhdzmop-cns012.bluewin.ch
 zhhdzmop-cns014.bluewin.ch
 zhhdzmop-cns014k.bluewin.ch
@@ -6916,6 +7080,7 @@ zhhdzmop-cns022.bluewin.ch
 zhhdzmop-cns024.bluewin.ch
 zhhdzmop-cns024k.bluewin.ch
 zhhdzmop-cns026.bluewin.ch
+zhhdzmop-cns026k.bluewin.ch
 zhhdzmop-cns02s.bluewin.ch
 zhhdzmop-cns11s.bluewin.ch
 zhhdzmop-cns11sk.bluewin.ch
@@ -6987,6 +7152,7 @@ zhhdzmsp-mail92.bluewin.ch
 zhhdzmsp-mail92k.bluewin.ch
 zhhdzmsp-mfwd92k.bluewin.ch
 zhhdzmsp-mgmt12.bluewin.ch
+zhhdzmsp-mgmt12k.bluewin.ch
 zhhdzmsp-moni12k.bluewin.ch
 zhhdzmsp-mpre12.bluewin.ch
 zhhdzmsp-mpre14.bluewin.ch
@@ -7007,6 +7173,7 @@ zhhdzmsp-mxin18k.bluewin.ch
 zhhdzmsp-mxin22.bluewin.ch
 zhhdzmsp-mxin24.bluewin.ch
 zhhdzmsp-mxin26.bluewin.ch
+zhhdzmsp-mxin26k.bluewin.ch
 zhhdzmsp-mxin30.bluewin.ch
 zhhdzmsp-mxin32.bluewin.ch
 zhhdzmsp-mxin32k.bluewin.ch
@@ -7043,6 +7210,7 @@ zhhdzmsp-rich40.bluewin.ch
 zhhdzmsp-rich42.bluewin.ch
 zhhdzmsp-rich44.bluewin.ch
 zhhdzmsp-rich46.bluewin.ch
+zhhdzmsp-rich46k.bluewin.ch
 zhhdzmsp-rich48k.bluewin.ch
 zhhdzmsp-rich50.bluewin.ch
 zhhdzmsp-rich52.bluewin.ch
@@ -7054,6 +7222,7 @@ zhhdzmsp-rich62k.bluewin.ch
 zhhdzmsp-rich64.bluewin.ch
 zhhdzmsp-rich64k.bluewin.ch
 zhhdzmsp-rich66.bluewin.ch
+zhhdzmsp-rich66k.bluewin.ch
 zhhdzmsp-rich68.bluewin.ch
 zhhdzmsp-rich68k.bluewin.ch
 zhhdzmsp-rich92.bluewin.ch
@@ -7071,8 +7240,10 @@ zhhdzmsp-smta16k.bluewin.ch
 zhhdzmsp-smta18.bluewin.ch
 zhhdzmsp-smta18k.bluewin.ch
 zhhdzmsp-smta92k.bluewin.ch
+zhhdzmsp-smtp14.bluewin.ch
 zhhdzmsp-smtp14k.bluewin.ch
 zhhdzmsp-smtp16k.bluewin.ch
+zhhdzpap-block1.bluewin.ch
 zhhdzpap-gsapp2k.bluewin.ch
 zhhdzpap-gsapp3.bluewin.ch
 zhhdzpap-gsapp3k.bluewin.ch
@@ -7097,6 +7268,7 @@ zhhdzpsp-adsv02.bluewin.ch
 zhhdzpsp-adsv02k.bluewin.ch
 zhhdzpsp-adsv03.bluewin.ch
 zhhdzpsp-adsv03k.bluewin.ch
+zhhdzpsp-besc01k.bluewin.ch
 zhhdzpsp-clgf01k.bluewin.ch
 zhhdzpsp-cns002.bluewin.ch
 zhhdzpsp-cns004.bluewin.ch
@@ -7116,6 +7288,7 @@ zhhdzpsp-eacp02.bluewin.ch
 zhhdzpsp-ftp02.bluewin.ch
 zhhdzpsp-gsdi01.bluewin.ch
 zhhdzpsp-gsdi02.bluewin.ch
+zhhdzpsp-gsdi02k.bluewin.ch
 zhhdzpsp-hcin22k.bluewin.ch
 zhhdzpsp-hcin24k.bluewin.ch
 zhhdzpsp-hndf01.bluewin.ch
@@ -7132,16 +7305,20 @@ zhhdzpsp-mwsp02.bluewin.ch
 zhhdzpsp-mwsp02k.bluewin.ch
 zhhdzpsp-nvrp01.bluewin.ch
 zhhdzpsp-nvrp01k.bluewin.ch
+zhhdzpsp-nvrp02.bluewin.ch
 zhhdzpsp-nvrp02k.bluewin.ch
+zhhdzpsp-nvrp04.bluewin.ch
 zhhdzpsp-nvrp05.bluewin.ch
 zhhdzpsp-nvrp05k.bluewin.ch
 zhhdzpsp-nvrp06.bluewin.ch
 zhhdzpsp-nvrp07k.bluewin.ch
 zhhdzpsp-nvrp08k.bluewin.ch
+zhhdzpsp-nvrp1s.bluewin.ch
 zhhdzpsp-nvrp2s.bluewin.ch
 zhhdzpsp-nvrp3sk.bluewin.ch
 zhhdzpsp-nvrp5sk.bluewin.ch
 zhhdzpsp-omsr01k.bluewin.ch
+zhhdzpsp-omsr1s.bluewin.ch
 zhhdzpsp-pabs01.bluewin.ch
 zhhdzpsp-pabs01k.bluewin.ch
 zhhdzpsp-pabs02.bluewin.ch
@@ -7183,7 +7360,9 @@ zhhdzpsp-paws1s.bluewin.ch
 zhhdzpsp-prox01.bluewin.ch
 zhhdzpsp-ptds01.bluewin.ch
 zhhdzpsp-ptds01k.bluewin.ch
+zhhdzpsp-ptws01.bluewin.ch
 zhhdzpsp-ptws01k.bluewin.ch
+zhhdzpsp-ptws02.bluewin.ch
 zhhdzpsp-ptws03.bluewin.ch
 zhhdzpsp-ptws06.bluewin.ch
 zhhdzpsp-ptwsn3.bluewin.ch
@@ -7207,6 +7386,7 @@ zhhdzpsp-samw24k.bluewin.ch
 zhhdzpsp-samws2.bluewin.ch
 zhhdzpsp-samws6.bluewin.ch
 zhhdzpsp-samws6k.bluewin.ch
+zhhdzpsp-srch02.bluewin.ch
 zhhdzpsp-srch02k.bluewin.ch
 zhhdzpsp-srch04.bluewin.ch
 zhhdzpsp-sscf01k.bluewin.ch
@@ -7235,6 +7415,7 @@ zhhdzpss-pamg1.bluewin.ch
 zhhdzpss-xs6112.bluewin.ch
 zhhdzpwp-pwcp01k.bluewin.ch
 zhhdzpwp-pwcp02.bluewin.ch
+zhhdzpwp-pwcw1s.bluewin.ch
 zhhdzpwp-pwcw1sk.bluewin.ch
 zhhdzpwp-pwcwd1.bluewin.ch
 zhhdzpwp-pwcwd2.bluewin.ch
@@ -7260,6 +7441,7 @@ zhhdzssp-idns26.bluewin.ch
 zhhdzssp-idns27.bluewin.ch
 zhhdzssp-idns28.bluewin.ch
 zhhdzssp-idnsv1.bluewin.ch
+zhhdzssp-idnsv1k.bluewin.ch
 zhhdzssp-list01.bluewin.ch
 zhhdzssp-list01k.bluewin.ch
 zhhdzssp-mail14.bluewin.ch
@@ -7283,9 +7465,11 @@ zhhia00p-adsl15k.bluewin.ch
 zhhia00p-adsl16.bluewin.ch
 zhhia00p-adsl17.bluewin.ch
 zhhia00p-adsl17k.bluewin.ch
+zhhia00p-rtaf01k.bluewin.ch
 zhhia00p-rtai01.bluewin.ch
 zhhia00p-rtdi02.bluewin.ch
 zhhia01p-rtdi01.bluewin.ch
+zhhia01p-rtdi02.bluewin.ch
 zhhia01p-rtdi02w.bluewin.ch
 zhtdz00t-rtdi01.bluewin.ch
 zhtdz00t-rtdi01y.bluewin.ch
