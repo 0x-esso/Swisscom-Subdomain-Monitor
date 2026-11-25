@@ -1,0 +1,14 @@
+assets.crowdinsider.ch
+aws.crowdinsider.ch
+azure.crowdinsider.ch
+dev.crowdinsider.ch
+monitor.crowdinsider.ch
+ns2.crowdinsider.ch
+prod.crowdinsider.ch
+remote.crowdinsider.ch
+s3.crowdinsider.ch
+sta.crowdinsider.ch
+test.crowdinsider.ch
+www.crowdinsider.ch
+www.dev.crowdinsider.ch
+www.sta.crowdinsider.ch
