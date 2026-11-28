@@ -75,6 +75,7 @@ mail.axept.ch
 meet.axept.ch
 my.axept.ch
 newsletter.axept.ch
+ns.axept.ch
 ns4.axept.ch
 nt.axept.ch
 ocs.axept.ch
